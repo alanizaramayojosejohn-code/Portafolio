@@ -1,0 +1,33 @@
+<div
+  class="bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 leading-relaxed text-gray-400 antialiased selection:bg-gray-300 selection:text-gray-900 min-h-screen"
+>
+  <div class="group/spotlight relative">
+    <div
+      id="light-effect"
+      class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
+      [style.background]="lightGradient"
+    ></div>
+
+    <div
+      class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0"
+    >
+      <a
+        href="#content"
+        class="absolute left-0 top-0 block -translate-x-full rounded-lg bg-gradient-to-br from-gray-400 via-gray-500 to-gray-600 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white focus-visible:translate-x-0 transition-transform shadow-lg"
+      >
+        Skip to Content
+      </a>
+
+      <div class="lg:flex lg:justify-between lg:gap-4">
+        <app-header></app-header>
+
+        <main id="content" class="pt-24 lg:w-[52%] lg:py-24">
+          <app-about></app-about>
+          <app-experience></app-experience>
+          <app-project></app-project>
+          <app-skill></app-skill>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
