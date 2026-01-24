@@ -1,0 +1,39 @@
+
+User-agent: *
+Allow: /
+
+Disallow: /experience/
+Disallow: /projects/
+
+User-Agent: Googlebot
+
+User-Agent: Binbot
+Allow: /
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: anthropic-ai
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: SemrushBot
+Allow: /
+
+User-Agent: AhrefsBot
+Allow: /
+
+User-Agent: M312bot
+Allow: /
+
+User-Agent: DotBot
+Allow: /
+
+Host: https://alanizaramayojosejohn.com
+Sitemap: https://alanizaramayojosejohn.com/sitemap.xml
+

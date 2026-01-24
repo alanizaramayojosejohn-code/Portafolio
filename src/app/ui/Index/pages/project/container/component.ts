@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { HeaderComponent } from '../../../components/header/container/component';
 
 interface Project {
   title: string;
@@ -10,11 +11,11 @@ interface Project {
 
 @Component({
   selector: 'app-project',
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProjectComponent {
+export default class ProjectComponent {
   projects = signal<Project[]>([
     {
       title: 'Sistema de Inventario y Mantenimiento',

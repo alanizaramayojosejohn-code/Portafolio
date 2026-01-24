@@ -1,5 +1,5 @@
 <header
-  class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24"
+  class="mt-0 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-20"
 >
   <div>
     <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
@@ -18,7 +18,7 @@
     </p>
 
     <nav class="nav hidden lg:block" aria-label="In-page jump links">
-      <ul class="mt-16 w-max">
+      <ul class="mt-5 w-max">
         @for (item of navItems(); track item.href) {
           <li>
             <a
@@ -41,7 +41,7 @@
     </nav>
   </div>
 
-  <ul class="ml-1 mt-8 flex items-center" aria-label="Social media">
+  <ul class="ml-1 mt-2 flex items-center" aria-label="Social media">
     @for (social of socialLinks(); track social.url) {
       <li class="mr-5 shrink-0 text-xs">
         <a
