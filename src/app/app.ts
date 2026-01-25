@@ -9,4 +9,17 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Portafolio');
+
+  private router = inject(Router);
+  private analytics = inject(Analytics);
+
+  constructor() {
+    this.router.events
+      .pipe(filter(e => e instanceof NavigationEnd))
+      .subscribe((e: NavigationEnd) => {
+        logEvent(this.analytics, 'page_view', {
+          page_path: e.urlAfterRedirects
+        });
+      });
+  }
 }

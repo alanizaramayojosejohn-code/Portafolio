@@ -5,6 +5,11 @@ import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { provideServiceWorker } from '@angular/service-worker';
 
+
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { provideAnalytics, getAnalytics } from '@angular/fire/analytics';
+import { environment } from './environments/environment';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
@@ -13,6 +18,8 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()), provideServiceWorker('ngsw-worker.js', {
             enabled: !isDevMode(),
             registrationStrategy: 'registerWhenStable:30000'
-          })
+          }),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics())
   ]
 };

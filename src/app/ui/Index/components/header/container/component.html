@@ -19,7 +19,7 @@
       <ul class="mt-5 w-max">
         @for (item of navItems(); track item.href) {
           <li>
-            <a
+            <a (click)="trackClick('{{item.label}}')"
               class="group flex items-center py-3 transition-all duration-300"
               [class.active]="item.active"
               [href]="item.href"
