@@ -1,87 +1,95 @@
 <div
-  class="flex bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 leading-relaxed text-gray-400 antialiased selection:bg-gray-300 selection:text-gray-900 min-h-screen"
+  class="bg-gradient-to-br from-gray-950 via-black to-gray-950 leading-relaxed text-gray-400 antialiased selection:bg-gray-300 selection:text-gray-900 min-h-screen"
 >
-  <app-header class="ml-20"></app-header>
+  <div class="mx-auto max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+    <div class="lg:flex lg:justify-between lg:gap-4">
+      <app-header class="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:py-24"></app-header>
 
-  <section
-    id="proyectos"
-    class="pt-24 lg:w-[52%] lg:py-24 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-    aria-label="Selected projects"
-  >
-    <div
-      class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-950/75 px-6 py-5 backdrop-blur-md md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 border-b border-slate-800/50"
-    >
-      <h2 class="text-sm font-bold uppercase tracking-widest text-teal-300 lg:sr-only">
-        Proyectos
-      </h2>
-    </div>
-
-    <div class="grid gap-6 sm:grid-cols-1">
-      @for (project of projects(); track project.title) {
-        <a
-          [href]="project.link || '#'"
-          class="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6 shadow-xl ring-1 ring-slate-700/50 transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/10 hover:ring-teal-500/50 hover:-translate-y-1"
+      <main class="lg:w-1/2 lg:py-24">
+        <section
+          id="proyectos"
+          class="pt-24 lg:w-[52%] lg:py-24 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+          aria-label="Selected projects"
         >
           <div
-            class="absolute inset-0 bg-gradient-to-br from-teal-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          ></div>
-
-          <div class="relative flex gap-4">
-            <div class="shrink-0">
-              <div class="relative">
-                <div
-                  class="absolute -inset-1 bg-gradient-to-br from-teal-400 to-blue-500 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-500"
-                ></div>
-                <img
-                  [src]="project.image"
-                  [alt]="project.title"
-                  class="relative w-16 h-16 object-contain rounded-lg bg-slate-900/50 p-2 ring-1 ring-slate-700/50"
-                />
-              </div>
-            </div>
-
-            <div class="flex-1 space-y-3">
-              <h3
-                class="text-xl font-semibold text-slate-200 group-hover:text-teal-300 transition-colors duration-300"
-              >
-                {{ project.title }}
-              </h3>
-
-              <p
-                class="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
-              >
-                {{ project.description }}
-              </p>
-
-              <div class="flex flex-wrap gap-2 pt-2">
-                @for (tech of project.technologies; track tech) {
-                  <span
-                    class="bg-teal-400/10 text-teal-300 text-xs font-medium px-3 py-1 rounded-full ring-1 ring-teal-400/20 hover:bg-teal-400/20 hover:ring-teal-400/40 transition-all duration-300"
-                  >
-                    {{ tech }}
-                  </span>
-                }
-              </div>
-            </div>
-
-            <div class="shrink-0 self-start">
-              <svg
-                class="w-5 h-5 text-slate-500 group-hover:text-teal-400 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-            </div>
+            class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-950/75 px-6 py-5 backdrop-blur-md md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 border-b border-slate-800/50"
+          >
+            <h2
+              class="text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-orange-400 lg:sr-only"
+            >
+              Proyectos
+            </h2>
           </div>
-        </a>
-      }
+
+          <div class="grid gap-6 sm:grid-cols-1">
+            @for (project of projects(); track project.title) {
+              <a
+                [href]="project.link || '#'"
+                class="group block relative overflow-hidden rounded-2xl bg-gradient-to-br from-stone-900 via-black to-stone-900 p-6 shadow-xl ring-1 ring-stone-700/50 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover:ring-orange-500/50 hover:-translate-y-1"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+
+                <div class="relative flex gap-4">
+                  <div class="shrink-0">
+                    <div class="relative">
+                      <div
+                        class="absolute -inset-1 bg-gradient-to-br from-orange-400 to-blue-500 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-500"
+                      ></div>
+                      <img
+                        [src]="project.image"
+                        [alt]="project.title"
+                        class="relative w-16 h-16 object-contain rounded-lg bg-slate-900/50 p-2 ring-1 ring-slate-700/50"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="flex-1 space-y-3">
+                    <h3
+                      class="text-xl font-semibold text-slate-200 group-hover:text-orange-300 transition-colors duration-300"
+                    >
+                      {{ project.title }}
+                    </h3>
+
+                    <p
+                      class="text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors duration-300"
+                    >
+                      {{ project.description }}
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 pt-2">
+                      @for (tech of project.technologies; track tech) {
+                        <span
+                          class="bg-orange-400/10 text-orange-300 text-xs font-medium px-3 py-1 rounded-full ring-1 ring-orange-400/20 hover:bg-orange-400/20 hover:ring-orange-400/40 transition-all duration-300"
+                        >
+                          {{ tech }}
+                        </span>
+                      }
+                    </div>
+                  </div>
+
+                  <div class="shrink-0 self-start">
+                    <svg
+                      class="w-5 h-5 text-slate-500 group-hover:text-orange-400 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            }
+          </div>
+        </section>
+      </main>
     </div>
-  </section>
+  </div>
 </div>

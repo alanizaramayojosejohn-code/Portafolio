@@ -1,100 +1,107 @@
 <div
-  class="flex bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 leading-relaxed text-gray-400 antialiased selection:bg-gray-300 selection:text-gray-900 min-h-screen"
+  class="bg-gradient-to-br from-gray-950 via-black to-gray-950 leading-relaxed text-gray-400 antialiased selection:bg-gray-300 selection:text-gray-900 min-h-screen"
 >
-  <app-header class="ml-20"></app-header>
-  <section
-    id="experience"
-    class="pt-24 lg:w-[52%] lg:py-24 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-    aria-label="Work experience"
-  >
-    <div
-      class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-950/75 px-6 py-5 backdrop-blur-md md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 border-b border-slate-800/50"
-    >
-      <h2
-        class="text-sm font-bold uppercase tracking-widest text-grays-500 hover:text-teal-400 lg:sr-only"
-      >
-        Experiencia
-      </h2>
-    </div>
+  <div class="mx-auto max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+    <div class="lg:flex lg:justify-between lg:gap-4">
+      <app-header class="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:py-24"></app-header>
 
-    <div>
-      <ol class="group/list space-y-8">
-        @for (exp of experiences(); track $index) {
-          <li class="group relative transition-all duration-300">
-            <div
-              class="grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+      <main class="lg:w-1/2 lg:py-24">
+        <section
+          id="experience"
+          class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+          aria-label="Work experience"
+        >
+          <div
+            class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-950/75 px-6 py-5 backdrop-blur-md md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 border-b border-slate-800/50"
+          >
+            <h2
+              class="text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-orange-400 lg:sr-only"
             >
-              <div
-                class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-xl transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg border border-transparent lg:group-hover:border-slate-700/50"
-              ></div>
+              Experiencia
+            </h2>
+          </div>
 
-              <header
-                class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 transition-colors duration-300 group-hover:text-teal-400"
-              >
-                {{ exp.period }}
-              </header>
+          <div>
+            <ol class="group/list space-y-8">
+              @for (exp of experiences(); track $index) {
+                <li class="group relative transition-all duration-300">
+                  <div
+                    class="grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+                  >
+                    <div
+                      class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-xl transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg border border-transparent lg:group-hover:border-slate-700/50"
+                    ></div>
 
-              <div class="z-10 sm:col-span-6 space-y-3">
-                @if (exp.title) {
-                  <h3 class="font-medium leading-snug text-slate-200">
-                    <div>
-                      @if (exp.link) {
-                        <a
-                          class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base transition-colors duration-300"
-                          [href]="exp.link"
-                          target="_blank"
-                          rel="noreferrer noopener"
-                        >
-                          <span
-                            class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
-                          ></span>
-                          <span>{{ exp.title }}</span>
-                          <svg
-                            class="ml-1 h-4 w-4 shrink-0 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </a>
-                      } @else {
-                        <p
-                          class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base"
-                        >
-                          <span>{{ exp.title }}</span>
-                        </p>
+                    <header
+                      class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 transition-colors duration-300 group-hover:text-orange-400"
+                    >
+                      {{ exp.period }}
+                    </header>
+
+                    <div class="z-10 sm:col-span-6 space-y-3">
+                      @if (exp.title) {
+                        <h3 class="font-medium leading-snug text-slate-200">
+                          <div>
+                            @if (exp.link) {
+                              <a
+                                class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-orange-300 focus-visible:text-orange-300 group/link text-base transition-colors duration-300"
+                                [href]="exp.link"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                              >
+                                <span
+                                  class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+                                ></span>
+                                <span>{{ exp.title }}</span>
+                                <svg
+                                  class="ml-1 h-4 w-4 shrink-0 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 20 20"
+                                  fill="currentColor"
+                                >
+                                  <path
+                                    fill-rule="evenodd"
+                                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                                    clip-rule="evenodd"
+                                  ></path>
+                                </svg>
+                              </a>
+                            } @else {
+                              <p
+                                class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-orange-300 focus-visible:text-orange-300 group/link text-base"
+                              >
+                                <span>{{ exp.title }}</span>
+                              </p>
+                            }
+                          </div>
+                        </h3>
                       }
-                    </div>
-                  </h3>
-                }
 
-                <p
-                  class="text-sm leading-relaxed text-slate-400 group-hover:text-slate-300 transition-colors duration-300"
-                >
-                  {{ exp.description }}
-                </p>
-
-                <ul class="flex flex-wrap gap-2" aria-label="Technologies used">
-                  @for (tech of exp.technologies; track tech) {
-                    <li>
-                      <div
-                        class="flex items-center rounded-full bg--400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ring-1 ring-teal-400/20 hover:bg-teal-400/20 hover:ring-teal-400/40 transition-all duration-300 cursor-default"
+                      <p
+                        class="text-sm leading-relaxed text-slate-400 group-hover:text-slate-300 transition-colors duration-300"
                       >
-                        {{ tech }}
-                      </div>
-                    </li>
-                  }
-                </ul>
-              </div>
-            </div>
-          </li>
-        }
-      </ol>
+                        {{ exp.description }}
+                      </p>
+
+                      <ul class="flex flex-wrap gap-2" aria-label="Technologies used">
+                        @for (tech of exp.technologies; track tech) {
+                          <li>
+                            <div
+                              class="flex items-center rounded-full bg-orange-400/10 px-3 py-1 text-xs font-medium leading-5 text-orange-300 ring-1 ring-orange-400/20 hover:bg-orange-400/20 hover:ring-orange-400/40 transition-all duration-300 cursor-default"
+                            >
+                              {{ tech }}
+                            </div>
+                          </li>
+                        }
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              }
+            </ol>
+          </div>
+        </section>
+      </main>
     </div>
-  </section>
+  </div>
 </div>

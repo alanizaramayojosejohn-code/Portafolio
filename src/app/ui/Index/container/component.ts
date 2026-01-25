@@ -13,7 +13,7 @@ export default class IndexComponent {
   mouseY = 222;
 
   get lightGradient(): string {
-    return `radial-gradient(600px at ${this.mouseX}px ${this.mouseY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+    return `radial-gradient(600px at ${this.mouseX}px ${this.mouseY}px, rgba(200, 200, 200, 0.15), transparent 80%)`;
   }
 
   @HostListener('document:mousemove', ['$event'])
