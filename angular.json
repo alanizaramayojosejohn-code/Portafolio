@@ -22,7 +22,12 @@
               },
               "src/favicon.ico",
               "src/robots.txt",
-              "src/sitemap.xml"
+              "src/sitemap.xml",
+              {
+                "glob": "**/*",
+                "input": "src/images",
+                "output": "/images"
+              }
             ],
             "styles": ["src/styles.scss"],
             "server": "src/main.server.ts",
