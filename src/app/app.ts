@@ -1,5 +1,9 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, PLATFORM_ID, signal } from '@angular/core';
+import { Analytics, logEvent } from '@angular/fire/analytics';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs';
+import { AnalyticsService } from './services/analytics/analytics.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -11,15 +15,28 @@ export class App {
   protected readonly title = signal('Portafolio');
 
   private router = inject(Router);
-  private analytics = inject(Analytics);
+  private platformId = inject(PLATFORM_ID);
+  private analyticsService = inject(AnalyticsService);
+  private analytics = isPlatformBrowser(this.platformId) ? inject(Analytics) : null;
 
   constructor() {
-    this.router.events
-      .pipe(filter(e => e instanceof NavigationEnd))
-      .subscribe((e: NavigationEnd) => {
-        logEvent(this.analytics, 'page_view', {
-          page_path: e.urlAfterRedirects
+    if (this.analytics) {
+      // Ejecutar en el próximo ciclo para evitar el warning
+      setTimeout(() => {
+        logEvent(this.analytics!, 'test_event');
+
+        this.router.events
+          .pipe(filter((e) => e instanceof NavigationEnd))
+          .subscribe((e: NavigationEnd) => {
+            logEvent(this.analytics!, 'page_view', {
+              page_path: e.urlAfterRedirects,
+            });
+          });
+
+        this.analyticsService.logEvent('app_initialized', {
+          timestamp: new Date().toISOString(),
         });
-      });
+      }, 0);
+    }
   }
 }

@@ -19,7 +19,10 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/favicon.ico",
+              "src/robots.txt",
+              "src/sitemap.xml"
             ],
             "styles": ["src/styles.scss"],
             "server": "src/main.server.ts",
