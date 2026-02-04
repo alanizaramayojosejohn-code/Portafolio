@@ -2,8 +2,8 @@
 User-agent: *
 Allow: /
 
-Disallow: /experience/
-Disallow: /projects/
+Disallow: /experiencia/
+Disallow: /proyectos/
 
 User-Agent: Googlebot
 
