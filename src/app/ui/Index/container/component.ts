@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { HeaderComponent } from '../components/header/container/component';
 import { AboutComponent } from '../components/about/container/component';
+import { ThemeService } from '../../../services/theme/theme.service';
+import { ThemeToggle } from '../../../components/theme-toggle/theme-toggle';
 
 @Component({
   selector: 'app-index',
-  imports: [HeaderComponent, AboutComponent],
+  imports: [HeaderComponent, AboutComponent, ThemeToggle],
   templateUrl: './component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

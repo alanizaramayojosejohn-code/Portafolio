@@ -2,3 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Modo Light (por defecto) */
+body {
+  background-color: #f1f5f9; /* Gris muy claro */
+  color: #1e293b; /* Texto oscuro */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo Dark */
+body.dark,
+html.dark body {
+  background-color: #0f172a; /* Tu color dark actual */
+  color: #e2e8f0; /* Texto claro */
+}

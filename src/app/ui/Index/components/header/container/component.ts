@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, HostListener, signal } from '@angular/core';
 import { Analytics, logEvent } from '@angular/fire/analytics';
 import { inject } from '@angular/core';
+import { ThemeToggle } from '../../../../../components/theme-toggle/theme-toggle';
 interface NavItem {
   label: string;
   href: string;
@@ -16,7 +17,7 @@ interface SocialLink {
 }
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [ ],
   templateUrl: './component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 

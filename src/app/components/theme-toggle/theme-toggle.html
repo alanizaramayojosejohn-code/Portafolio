@@ -1,0 +1,13 @@
+<div class="flex items-center gap-2 rounded-full bg-gray-800/50 p-1 backdrop-blur-sm">
+      @for (option of themeOptions; track option.value) {
+        <button
+          (click)="setTheme(option.value)"
+          [class.active]="themeService.currentTheme() === option.value"
+          class="theme-btn rounded-full px-3 py-1.5 text-xs font-medium transition-all duration-300 hover:bg-orange-500/20"
+          [attr.aria-label]="'Cambiar a modo ' + option.label"
+        >
+          <span class="icon">{{ option.icon }}</span>
+          <span class="label">{{ option.label }}</span>
+        </button>
+      }
+    </div>
