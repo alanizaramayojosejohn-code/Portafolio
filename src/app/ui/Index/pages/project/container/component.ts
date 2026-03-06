@@ -41,5 +41,12 @@ export default class ProjectComponent {
       link: '',
       image: 'images/gitlab.webp',
     },
+    {
+      title: 'Sistema de Control de Asistencia y Membresías',
+      description: 'Sistema web para el control de membresías y asistencia de la academia Helluz',
+       technologies: ['C#', 'SQLite', 'HTML/CSS'],
+      link: 'https://github.com/JoseJ57/vicu2/tree/Jose',
+      image: 'images/github.webp',
+    },
   ]);
 }
