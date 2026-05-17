@@ -1,0 +1,14 @@
+[  343936ms] [ERROR] ERROR TypeError: Cannot read properties of undefined (reading 'nativeElement')
+    at _PortfolioShellComponent.tick (http://localhost:4201/main.js:636:21)
+    at _PortfolioShellComponent.ngAfterViewInit (http://localhost:4201/main.js:624:10)
+    at callHookInternal (http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:835:10)
+    at callHook (http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:850:7)
+    at callHooks (http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:824:9)
+    at executeInitAndCheckHooks (http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:793:5)
+    at refreshView (http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:6582:11)
+    at detectChangesInView (http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:6675:5)
+    at detectChangesInViewIfAttached (http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:6658:3)
+    at detectChangesInComponent (http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:6651:3) @ http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-PPW336GD.js?v=b44f7dda:2748
+[  343944ms] [LOG] Angular is running in development mode. @ http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:11967
+[  343972ms] [WARNING] Calling Firebase APIs outside of an Injection context may destabilize your application leading to subtle change-detection and hydration bugs. Find more at https://github.com/angular/angularfire/blob/main/docs/zones.md @ http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-673AL5L4.js?v=b44f7dda:2392
+[  344111ms] [LOG] Angular hydrated 6 component(s) and 146 node(s), 0 component(s) were skipped. Learn more at https://angular.dev/guide/hydration. @ http://localhost:4201/@fs/C:/Users/Jose/Desktop/Portafolio/Portafolio/.angular/cache/20.3.15/Portafolio/vite/deps/chunk-QP7BIU6T.js?v=b44f7dda:11967

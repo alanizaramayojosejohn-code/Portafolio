@@ -1,13 +1,14 @@
 import { Component, inject, PLATFORM_ID, signal } from '@angular/core';
 import { Analytics, logEvent } from '@angular/fire/analytics';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 import { AnalyticsService } from './services/analytics/analytics.service';
 import { isPlatformBrowser } from '@angular/common';
+import PortfolioShellComponent from './core/layout/portfolio-shell/portfolio-shell';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [PortfolioShellComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

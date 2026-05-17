@@ -1,0 +1,82 @@
+<header
+  #siteHeader
+  class="site-header sticky top-0 z-50 border-b backdrop-blur-xl"
+  [class.scrolled]="scrolled()"
+  style="border-color: transparent;"
+>
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+    <a
+      routerLink="/"
+      class="group min-h-[44px] min-w-[44px] shrink-0 content-center rounded-lg py-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-500"
+      aria-label="Inicio — José John Alaniz"
+    >
+      <span
+        class="block text-sm font-bold tracking-tight transition-colors group-hover:text-accent-500 sm:text-base"
+        style="color: var(--text-primary);"
+      >
+        José Alaniz
+      </span>
+      <span class="block text-xs" style="color: var(--text-muted);">Portafolio</span>
+    </a>
+
+    <nav class="hidden items-center gap-1 md:flex" aria-label="Principal">
+      @for (link of links; track link.path) {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="accent-active"
+          [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+          class="nav-link"
+        >
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <app-theme-toggle class="hidden sm:block" />
+      <button
+        type="button"
+        class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg md:hidden nav-link"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="menu-movil"
+      >
+        <span class="sr-only">Abrir o cerrar menú</span>
+        @if (menuOpen()) {
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        } @else {
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        }
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="menu-movil"
+    class="mobile-menu border-t px-4 py-4 md:hidden"
+    [class.mobile-menu-enter]="menuOpen()"
+    [class.mobile-menu-leave]="!menuOpen()"
+    style="background: var(--glass-bg); border-color: var(--glass-border);"
+  >
+      <nav class="flex flex-col gap-1" aria-label="Principal móvil">
+        @for (link of links; track link.path) {
+          <a
+            [routerLink]="link.path"
+            routerLinkActive="accent-active"
+            [routerLinkActiveOptions]="{ exact: link.path === '/' }"
+            class="nav-link min-h-[48px] content-center rounded-lg px-3 py-3 text-base font-medium"
+            (click)="closeMenu()"
+          >
+            {{ link.label }}
+          </a>
+        }
+      </nav>
+      <div class="mt-4 border-t pt-4 sm:hidden" style="border-color: var(--glass-border);">
+        <app-theme-toggle />
+      </div>
+    </div>
+</header>

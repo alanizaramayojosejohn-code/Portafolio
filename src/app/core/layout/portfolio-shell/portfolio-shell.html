@@ -1,0 +1,41 @@
+<!-- Custom cursor dot (solo dispositivos con mouse) -->
+<div #cursorDot class="cursor-dot"></div>
+
+<!-- Particle canvas -->
+<canvas #particleCanvas class="particle-canvas"></canvas>
+
+<div
+  class="relative min-h-dvh text-neutral-300 antialiased selection:bg-accent-500/20 selection:text-accent-300 overflow-x-hidden"
+  style="background: var(--bg-primary);"
+>
+  <!-- Ambient background orbs -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div
+      class="absolute -top-48 -left-48 w-[500px] h-[500px] rounded-full opacity-10 animate-orb-float"
+      style="background: radial-gradient(circle, rgba(249,115,22,0.3) 0%, transparent 70%);"
+    ></div>
+    <div
+      class="absolute top-1/3 -right-32 w-[450px] h-[450px] rounded-full opacity-8 animate-orb-float"
+      style="background: radial-gradient(circle, rgba(234,88,12,0.2) 0%, transparent 70%); animation-delay: -5s;"
+    ></div>
+    <div
+      class="absolute -bottom-32 left-1/4 w-[400px] h-[400px] rounded-full opacity-6 animate-orb-float"
+      style="background: radial-gradient(circle, rgba(194,65,12,0.2) 0%, transparent 70%); animation-delay: -10s;"
+    ></div>
+  </div>
+
+  <a
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-neutral-900 focus:px-4 focus:py-2 focus:text-sm focus:text-accent-500 focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-accent-500"
+    href="#contenido-principal"
+  >
+    Saltar al contenido
+  </a>
+
+  <div class="relative z-10 flex min-h-dvh flex-col">
+    <app-site-header />
+    <main id="contenido-principal" tabindex="-1" class="flex-1">
+      <router-outlet />
+    </main>
+    <app-site-footer />
+  </div>
+</div>

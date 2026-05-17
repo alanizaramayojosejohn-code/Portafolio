@@ -1,0 +1,69 @@
+<div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+  <header class="max-w-2xl">
+    <p class="text-xs font-bold uppercase tracking-widest text-cyan-500">Trayectoria</p>
+    <h1 class="mt-2 text-3xl font-bold tracking-tight text-slate-100 sm:text-4xl">Experiencia</h1>
+    <p class="mt-3 text-slate-500">Proyectos académicos y colaboraciones recientes.</p>
+  </header>
+
+  <div class="mt-10 flex items-center gap-3">
+    <div class="h-px flex-1 bg-gradient-to-r from-cyan-500/50 to-transparent"></div>
+    <span class="text-xs font-bold uppercase tracking-widest text-cyan-500">Línea de tiempo</span>
+    <div class="h-px flex-1 bg-gradient-to-l from-cyan-500/50 to-transparent"></div>
+  </div>
+
+  <ol class="mt-8 max-w-3xl space-y-5">
+    @for (exp of experiences(); track $index) {
+      <li class="group">
+        <article class="glass-card rounded-2xl p-5 sm:p-6">
+          <div class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <span
+              class="inline-flex w-fit shrink-0 items-center rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"
+              style="background: rgba(6,182,212,0.08); border: 1px solid rgba(6,182,212,0.2); color: #22d3ee;"
+            >{{ exp.period }}</span>
+
+            @if (exp.title) {
+              <div class="min-w-0">
+                @if (exp.link) {
+                  <a
+                    class="group/link inline-flex items-center gap-1 text-sm font-semibold text-slate-200 transition-colors hover:text-cyan-300"
+                    [href]="exp.link"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {{ exp.title }}
+                    <svg
+                      class="h-3.5 w-3.5 shrink-0 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                  </a>
+                } @else {
+                  <span class="text-sm font-semibold text-slate-300">{{ exp.title }}</span>
+                }
+              </div>
+            }
+          </div>
+
+          <p class="mb-4 text-sm leading-relaxed text-slate-400 transition-colors group-hover:text-slate-300">
+            {{ exp.description }}
+          </p>
+
+          <ul class="flex flex-wrap gap-2" aria-label="Tecnologías">
+            @for (tech of exp.technologies; track tech) {
+              <li>
+                <span
+                  class="rounded-full px-2.5 py-1 text-xs font-medium text-cyan-300/80"
+                  style="background: rgba(6,182,212,0.06); border: 1px solid rgba(6,182,212,0.15);"
+                >{{ tech }}</span>
+              </li>
+            }
+          </ul>
+        </article>
+      </li>
+    }
+  </ol>
+</div>

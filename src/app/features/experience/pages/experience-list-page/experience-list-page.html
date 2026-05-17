@@ -1,0 +1,68 @@
+<div class="py-20 px-4">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Page header -->
+    <div class="mb-14" data-anim="fade-up">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent-500 mb-3">Trayectoria</p>
+      <h1 class="text-4xl font-bold mb-3 tracking-tight" style="color: var(--text-primary);">
+        Experiencia Completa
+      </h1>
+      <p class="text-sm leading-relaxed max-w-lg" style="color: var(--text-muted);">
+        Mi trayectoria profesional y proyectos académicos,
+        desde desarrollo web hasta sistemas de gestión empresarial.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Timeline line with gradient -->
+      <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px md:-translate-x-1/2"
+           style="background: linear-gradient(to bottom, transparent, rgba(249,115,22,0.25) 6%, rgba(249,115,22,0.12) 94%, transparent);">
+      </div>
+
+      @for (exp of experiences; track exp.period; let i = $index) {
+        <div class="relative mb-12"
+          [attr.data-anim]="i % 2 === 0 ? 'fade-left' : 'fade-right'"
+          data-delay="1"
+        >
+          <div class="md:flex items-center gap-8">
+            <!-- Timeline dot with glow -->
+            <div class="absolute left-[-7px] md:left-1/2 md:-translate-x-[7px] w-3.5 h-3.5 rounded-full"
+                 style="background: var(--accent-primary); box-shadow: 0 0 0 4px rgba(249,115,22,0.1), 0 0 14px rgba(249,115,22,0.3);">
+            </div>
+
+            <!-- Content -->
+            <div class="ml-8 md:ml-0 md:w-1/2"
+                 [class.md:text-right]="i % 2 === 0"
+                 [class.md:pr-8]="i % 2 === 0"
+                 [class.md:pl-8]="i % 2 !== 0">
+              <div class="glass-card p-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-accent-500">
+                  {{ exp.period }}
+                </span>
+                @if (exp.title) {
+                  <h3 class="text-base font-semibold mt-2 mb-2" style="color: var(--text-primary);">
+                    {{ exp.title }}
+                  </h3>
+                }
+                <p class="text-sm leading-relaxed" style="color: var(--text-muted);">
+                  {{ exp.description }}
+                </p>
+                @if (exp.technologies && exp.technologies.length > 0) {
+                  <div class="flex flex-wrap gap-1.5 mt-4"
+                       [class.md:justify-end]="i % 2 === 0"
+                       [class.md:justify-start]="i % 2 !== 0">
+                    @for (tech of exp.technologies; track tech) {
+                      <span class="tech-tag text-xs">{{ tech }}</span>
+                    }
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</div>

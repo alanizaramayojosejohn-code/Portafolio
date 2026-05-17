@@ -1,0 +1,28 @@
+<footer class="border-t backdrop-blur-md" style="background: var(--glass-bg); border-color: var(--glass-border);">
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+      <div>
+        <p class="text-sm font-semibold" style="color: var(--text-secondary);">José Alaniz</p>
+        <p class="text-xs mt-1" style="color: var(--text-muted);">Full Stack Developer · Ingeniería Informática</p>
+      </div>
+      <nav class="flex flex-wrap gap-x-1 gap-y-1 text-sm" aria-label="Pie de página">
+        <a routerLink="/sobre-mi" class="nav-link text-sm">Sobre mí</a>
+        <a routerLink="/experiencia" class="nav-link text-sm">Experiencia</a>
+        <a routerLink="/proyectos" class="nav-link text-sm">Proyectos</a>
+        <a routerLink="/contacto" class="nav-link text-sm">Contacto</a>
+      </nav>
+    </div>
+
+    <div class="mt-8 pt-6 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between"
+         style="border-top: 1px solid var(--glass-border);">
+      <p class="text-xs" style="color: var(--text-muted);">
+        © {{ year }} José John Alaniz Aramayo
+      </p>
+      <p class="text-xs" style="color: var(--text-muted);">
+        Angular · Tailwind CSS · Firebase
+      </p>
+    </div>
+
+  </div>
+</footer>

@@ -1,0 +1,40 @@
+- generic [ref=e4]:
+  - link "Saltar al contenido" [ref=e5]:
+    - /url: "#contenido-principal"
+  - generic [ref=e6]:
+    - banner [ref=e8]:
+      - generic [ref=e9]:
+        - link "Inicio — José John Alaniz" [ref=e10]:
+          - /url: /
+          - generic [ref=e11]: José Alaniz
+          - generic [ref=e12]: Portafolio
+        - navigation "Principal" [ref=e13]:
+          - link "Inicio" [ref=e14]:
+            - /url: /
+          - link "Experiencia" [ref=e15]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e16]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e17]:
+            - /url: /contacto
+        - generic [ref=e20]:
+          - button "Cambiar a modo Light" [ref=e21]:
+            - img [ref=e22]
+            - generic [ref=e24]: Light
+          - button "Cambiar a modo Dark" [ref=e25]:
+            - img [ref=e26]
+            - generic [ref=e28]: Dark
+          - button "Cambiar a modo Auto" [ref=e29]:
+            - img [ref=e30]
+            - generic [ref=e32]: Auto
+    - main [ref=e33]
+    - contentinfo [ref=e35]:
+      - generic [ref=e36]:
+        - paragraph [ref=e37]: © 2026 José John Alaniz Aramayo
+        - navigation "Pie de página" [ref=e38]:
+          - link "Experiencia" [ref=e39]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e40]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e41]:
+            - /url: /contacto

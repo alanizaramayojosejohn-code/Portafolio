@@ -1,0 +1,417 @@
+<div>
+
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section class="relative min-h-dvh flex flex-col items-center justify-center px-4 py-24 overflow-hidden">
+    <!-- Dot grid -->
+    <div class="absolute inset-0 pointer-events-none"
+      style="background-image: radial-gradient(circle, rgba(249,115,22,0.06) 1px, transparent 1px); background-size: 36px 36px;">
+    </div>
+    <!-- Radial vignette -->
+    <div class="absolute inset-0 pointer-events-none"
+      style="background: radial-gradient(ellipse 80% 70% at 50% 50%, transparent 25%, var(--bg-primary) 100%);">
+    </div>
+
+    <!-- Staggered hero content — CSS entrance animation, no scroll needed -->
+    <div class="relative max-w-4xl mx-auto text-center flex-1 flex flex-col items-center justify-center w-full">
+
+
+
+      <div class="hero-enter" style="animation-delay:0.06s">
+        <div class="status-badge mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+          Disponible para proyectos
+        </div>
+      </div>
+
+      <p class="text-xs font-bold uppercase tracking-[0.25em] mb-4 hero-enter"
+        style="animation-delay:0.12s; color: var(--accent-primary); opacity: 0.75;">
+        Hola, soy
+      </p>
+
+      <h1 class="text-6xl sm:text-7xl md:text-8xl font-bold mb-5 leading-none tracking-tight hero-enter"
+        style="animation-delay:0.24s;">
+        <span class="gradient-text">{{ profile.name }}</span>
+      </h1>
+      <!-- Avatar -->
+      <div class="hero-enter mb-6" style="animation-delay:0s">
+        <div class="relative inline-block">
+          <div class="absolute -inset-1 rounded-full animate-glow-pulse"
+            style="background: conic-gradient(from 0deg, #f97316, #ea580c, #f97316); filter: blur(8px); opacity: 0.45;">
+          </div>
+          <div class="relative h-60 w-60 rounded-full overflow-hidden" style="border: 2px solid var(--bg-primary);">
+            <img src="images/me/Jose_Alaniz.webp" alt="José Alaniz" class="w-full h-full object-cover object-top" />
+          </div>
+        </div>
+      </div>
+      <p class="text-lg sm:text-xl md:text-2xl font-light mb-5 hero-enter"
+        style="animation-delay:0.36s; color: var(--text-tertiary);">
+        {{ profile.role }}
+      </p>
+
+      <p class="text-sm max-w-md mx-auto mb-12 leading-relaxed hero-enter"
+        style="animation-delay:0.48s; color: var(--text-muted);">
+        {{ profile.tagline }}
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 hero-enter" style="animation-delay:0.62s;">
+        <button (click)="scrollToSection('proyectos')" class="btn-primary group">
+          Ver proyectos
+          <svg class="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+        <button (click)="scrollToSection('contacto')" class="btn-secondary">Contacto</button>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="flex flex-col items-center gap-2 pb-2 hero-enter"
+      style="animation-delay:0.85s; color: var(--text-muted);">
+      <span class="text-[10px] tracking-[0.2em] uppercase font-medium">Scroll</span>
+      <div class="scroll-indicator"></div>
+    </div>
+  </section>
+
+  <!-- ── Sobre mí ───────────────────────────────────────────────── -->
+  <section id="sobre-mi" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="flex items-center gap-4 mb-14" data-anim="fade-up">
+        <span class="font-mono text-[10px] font-bold tracking-widest"
+          style="color: var(--accent-primary); opacity: 0.4;">01</span>
+        <div class="h-px w-6" style="background: var(--accent-primary); opacity: 0.3;"></div>
+        <span class="text-xs font-bold uppercase tracking-[0.2em]" style="color: var(--accent-primary);">Sobre mí</span>
+        <div class="h-px flex-1" style="background: linear-gradient(90deg, rgba(249,115,22,0.2), transparent);"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 mb-16">
+        <div data-anim="fade-left">
+          <h2 class="text-2xl font-bold mb-4" style="color: var(--text-primary);">
+            Pasión por el código limpio
+          </h2>
+          <p class="leading-relaxed" style="color: var(--text-tertiary);">
+            Soy estudiante de Ingeniería Informática con enfoque en desarrollo de software profesional y funcional.
+            Me especializo en crear experiencias digitales que mejoran la calidad de trabajo de las personas.
+          </p>
+        </div>
+        <div data-anim="fade-right" data-delay="2">
+          <h2 class="text-2xl font-bold mb-4" style="color: var(--text-primary);">
+            Pasión por la investigación y el crecimiento
+          </h2>
+          <p class="leading-relaxed" style="color: var(--text-tertiary);">
+            Investigar sobre nuevas herramientas, tecnología e inteligencia artificial es parte de mi práctica diaria.
+            Me interesa cómo la IA puede transformar el
+            <span class="font-medium text-accent-500">desarrollo de software</span>, el
+            <span class="font-medium" style="color: #a78bfa;">marketing digital</span>
+            y la <span class="font-medium" style="color: #2dd4bf;">integración dentro de sistemas</span>.
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-3 mb-8" data-anim="fade-up">
+          <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-accent-500 whitespace-nowrap">Stack Tecnológico
+          </h3>
+          <div class="h-px flex-1" style="background: linear-gradient(90deg, rgba(249,115,22,0.25), transparent);">
+          </div>
+        </div>
+
+        @for (group of techStack; track group.category; let gi = $index) {
+        <div class="mb-8" data-anim="fade-up" [attr.data-delay]="gi + 1">
+          <h4 class="text-[11px] font-semibold uppercase tracking-widest mb-4 flex items-center gap-2"
+            [style.color]="group.category === 'IA & Dev Tools' ? '#22d3ee' : 'var(--text-muted)'">
+            @if (group.category === 'IA & Dev Tools') {
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+            </svg>
+            } @else {
+            <span class="inline-block h-1 w-1 rounded-full" style="background: var(--text-muted); opacity: 0.6;"></span>
+            }
+            {{ group.category }}
+          </h4>
+          <div class="flex flex-wrap gap-3">
+            @for (skill of group.skills; track skill.name) {
+            <div class="tech-icon-card" [class.ai-glow]="skill.ai"
+              style="flex-direction: column; align-items: center; justify-content: center; padding: 1rem 0.75rem; min-width: 80px; gap: 0.5rem;">
+              <img [src]="skill.icon" [alt]="skill.name" class="w-12 h-12 object-contain" />
+              <span class="text-xs font-medium text-center leading-tight" [class.text-cyan-300]="skill.ai"
+                [class.text-neutral-400]="!skill.ai">{{ skill.name }}</span>
+            </div>
+            }
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Proyectos ──────────────────────────────────────────────── -->
+  <section id="proyectos" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="flex items-center gap-4 mb-14" data-anim="fade-up">
+        <span class="font-mono text-[10px] font-bold tracking-widest"
+          style="color: var(--accent-primary); opacity: 0.4;">02</span>
+        <div class="h-px w-6" style="background: var(--accent-primary); opacity: 0.3;"></div>
+        <span class="text-xs font-bold uppercase tracking-[0.2em]"
+          style="color: var(--accent-primary);">Proyectos</span>
+        <div class="h-px flex-1" style="background: linear-gradient(90deg, rgba(249,115,22,0.2), transparent);"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @for (project of displayedProjects; track project.slug; let i = $index) {
+        <article class="glass-card overflow-hidden flex flex-col group" data-anim="scale-up"
+          [attr.data-delay]="(i + 1) * 2">
+
+          <div class="h-44 relative overflow-hidden" [style.background]="project.headerGradient">
+            @if (project.image) {
+            <img [src]="project.image" [alt]="project.title"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy" />
+            } @else {
+            <div class="absolute inset-0"
+              style="background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 16px 16px;">
+            </div>
+            }
+            <div class="absolute inset-0"
+              style="background: linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, transparent 35%, rgba(0,0,0,0.65) 100%);">
+            </div>
+            <div class="absolute top-4 left-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-full"
+                style="background: rgba(0,0,0,0.55); backdrop-filter: blur(8px); color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.12);">
+                {{ project.category }}
+              </span>
+            </div>
+            <div class="absolute bottom-3 right-4 font-mono text-xs font-bold" style="color: rgba(255,255,255,0.2);">
+              {{ i < 9 ? '0' + (i + 1) : (i + 1) }} </div>
+            </div>
+
+            <div class="p-5 flex-1 flex flex-col">
+              <h3 class="text-base font-semibold mb-2" style="color: var(--text-primary);">
+                {{ project.title }}
+              </h3>
+              <p class="text-sm leading-relaxed mb-4 line-clamp-3 flex-1" style="color: var(--text-muted);">
+                {{ project.description }}
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                @for (tech of project.technologies.slice(0, 3); track tech) {
+                <span class="tech-tag text-xs">{{ tech }}</span>
+                }
+                @if (project.technologies.length > 3) {
+                <span class="tech-tag text-xs" style="opacity: 0.6;">+{{ project.technologies.length - 3 }}</span>
+                }
+              </div>
+            </div>
+
+            <div class="px-5 pb-5">
+              <a [href]="project.link" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-between w-full py-3 text-sm font-semibold transition-all group/link"
+                style="border-top: 1px solid var(--glass-border); color: var(--accent-primary);">
+                <span>Ver proyecto</span>
+                <svg
+                  class="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+        </article>
+        }
+      </div>
+
+      @if (allProjects.length > 3) {
+      <div class="text-center mt-12" data-anim="fade-up" data-delay="2">
+        <a routerLink="/proyectos" class="btn-secondary">Ver todos los proyectos</a>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- ── Experiencia ────────────────────────────────────────────── -->
+  <section id="experiencia" class="py-24 px-4">
+    <div class="max-w-4xl mx-auto">
+
+      <div class="flex items-center gap-4 mb-14" data-anim="fade-up">
+        <span class="font-mono text-[10px] font-bold tracking-widest"
+          style="color: var(--accent-primary); opacity: 0.4;">03</span>
+        <div class="h-px w-6" style="background: var(--accent-primary); opacity: 0.3;"></div>
+        <span class="text-xs font-bold uppercase tracking-[0.2em]"
+          style="color: var(--accent-primary);">Experiencia</span>
+        <div class="h-px flex-1" style="background: linear-gradient(90deg, rgba(249,115,22,0.2), transparent);"></div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px md:-translate-x-1/2"
+          style="background: linear-gradient(to bottom, transparent, rgba(249,115,22,0.25) 8%, rgba(249,115,22,0.12) 92%, transparent);">
+        </div>
+
+        @for (exp of displayedExperiences; track exp.period; let i = $index) {
+        <div class="relative mb-12" [attr.data-anim]="i % 2 === 0 ? 'fade-left' : 'fade-right'" data-delay="1">
+
+          <div class="md:flex items-center gap-8">
+            <div class="absolute left-[-7px] md:left-1/2 md:-translate-x-[7px] w-3.5 h-3.5 rounded-full"
+              style="background: var(--accent-primary); box-shadow: 0 0 0 4px rgba(249,115,22,0.1), 0 0 14px rgba(249,115,22,0.3);">
+            </div>
+
+            <div class="ml-8 md:ml-0 md:w-1/2" [class.md:text-right]="i % 2 === 0" [class.md:pr-8]="i % 2 === 0"
+              [class.md:pl-8]="i % 2 !== 0">
+              <div class="glass-card p-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-accent-500">
+                  {{ exp.period }}
+                </span>
+                @if (exp.title) {
+                <h3 class="text-base font-semibold mt-2 mb-2" style="color: var(--text-primary);">
+                  {{ exp.title }}
+                </h3>
+                }
+                <p class="text-sm leading-relaxed" style="color: var(--text-muted);">
+                  {{ exp.description }}
+                </p>
+                @if (exp.technologies && exp.technologies.length > 0) {
+                <div class="flex flex-wrap gap-1.5 mt-4" [class.md:justify-end]="i % 2 === 0">
+                  @for (tech of exp.technologies.slice(0, 4); track tech) {
+                  <span class="tech-tag text-xs">{{ tech }}</span>
+                  }
+                </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+
+      @if (experiences.length > 3) {
+      <div class="text-center mt-12" data-anim="fade-up" data-delay="2">
+        <a routerLink="/experiencia" class="btn-secondary">Ver experiencia completa</a>
+      </div>
+      }
+    </div>
+  </section>
+
+  <!-- ── Contacto ───────────────────────────────────────────────── -->
+  <section id="contacto" class="py-24 px-4">
+    <div class="max-w-4xl mx-auto">
+
+      <div class="flex items-center gap-4 mb-14" data-anim="fade-up">
+        <span class="font-mono text-[10px] font-bold tracking-widest"
+          style="color: var(--accent-primary); opacity: 0.4;">04</span>
+        <div class="h-px w-6" style="background: var(--accent-primary); opacity: 0.3;"></div>
+        <span class="text-xs font-bold uppercase tracking-[0.2em]" style="color: var(--accent-primary);">Contacto</span>
+        <div class="h-px flex-1" style="background: linear-gradient(90deg, rgba(249,115,22,0.2), transparent);"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div data-anim="fade-left">
+          <h3 class="text-xl font-semibold mb-3" style="color: var(--text-primary);">Conectemos</h3>
+          <p class="text-sm mb-6 leading-relaxed" style="color: var(--text-muted);">
+            Estoy abierto a proyectos académicos, prácticas y colaboraciones.
+            Respondo con prioridad por LinkedIn o GitHub.
+          </p>
+          <ul class="space-y-2.5">
+            @for (social of profile.social; track social.url) {
+            <li>
+              <a [href]="social.url" target="_blank" rel="noopener noreferrer"
+                class="flex items-center justify-between px-4 py-3.5 rounded-xl border transition-all group"
+                style="border-color: var(--glass-border); color: var(--text-secondary);">
+                <span class="font-medium text-sm group-hover:text-accent-500 transition-colors">{{ social.title
+                  }}</span>
+                <svg
+                  class="w-4 h-4 text-neutral-600 group-hover:text-accent-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
+                  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </li>
+            }
+          </ul>
+        </div>
+
+        <div data-anim="fade-right" data-delay="3">
+          <h3 class="text-xl font-semibold mb-1" style="color: var(--text-primary);">Envíame un mensaje</h3>
+          <p class="text-sm mb-6" style="color: var(--text-muted);">Respondo en menos de 24 horas.</p>
+
+          <form class="space-y-4" (ngSubmit)="onSubmit($event)" novalidate>
+            <div>
+              <label for="contact-name" class="block text-xs font-semibold uppercase tracking-wide mb-2"
+                style="color: var(--text-tertiary);">
+                Nombre <span style="color: var(--accent-primary);">*</span>
+              </label>
+              <input id="contact-name" type="text" name="name" placeholder="Tu nombre" required minlength="2"
+                class="w-full" />
+            </div>
+
+            <div>
+              <label for="contact-email" class="block text-xs font-semibold uppercase tracking-wide mb-2"
+                style="color: var(--text-tertiary);">
+                Email <span style="color: var(--accent-primary);">*</span>
+              </label>
+              <input id="contact-email" type="email" name="email" placeholder="tu@email.com" required class="w-full" />
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label for="contact-message" class="text-xs font-semibold uppercase tracking-wide"
+                  style="color: var(--text-tertiary);">
+                  Mensaje <span style="color: var(--accent-primary);">*</span>
+                </label>
+                <span class="text-[10px] font-mono tabular-nums"
+                  [style.color]="messageLength() > 480 ? 'var(--accent-primary)' : 'var(--text-muted)'">
+                  {{ messageLength() }}/500
+                </span>
+              </div>
+              <textarea id="contact-message" name="message" placeholder="Cuéntame sobre tu proyecto o idea..." required
+                rows="5" maxlength="500" class="w-full resize-none" (input)="onMessageInput($event)"></textarea>
+            </div>
+
+            @if (submitSuccess()) {
+            <div class="flex items-start gap-3 p-4 rounded-xl text-sm" role="status" aria-live="polite"
+              style="background: rgba(34,197,94,0.07); border: 1px solid rgba(34,197,94,0.2); color: #4ade80;">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              <span>¡Mensaje enviado! Te contactaré lo antes posible.</span>
+            </div>
+            }
+
+            @if (submitError()) {
+            <div class="flex items-start gap-3 p-4 rounded-xl text-sm" role="alert" aria-live="assertive"
+              style="background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.2); color: #f87171;">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+              </svg>
+              <span>Hubo un error al enviar. Intenta de nuevo o escríbeme directamente por LinkedIn.</span>
+            </div>
+            }
+
+            <button type="submit" class="btn-primary w-full justify-center" [disabled]="isSubmitting()">
+              @if (isSubmitting()) {
+              <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                </path>
+              </svg>
+              Enviando...
+              } @else {
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+              Enviar mensaje
+              }
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,159 @@
+<div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+
+  <header class="max-w-2xl mb-12" data-anim="fade-up">
+    <p class="text-xs font-bold uppercase tracking-widest text-accent-500">Contacto</p>
+    <h1 class="mt-2 text-3xl font-bold tracking-tight sm:text-4xl" style="color: var(--text-primary);">
+      Hablemos
+    </h1>
+    <p class="mt-3 text-sm leading-relaxed" style="color: var(--text-muted);">
+      Escribime directamente o encontrá mis redes. Respondo en menos de 24 horas.
+    </p>
+  </header>
+
+  <!-- Top row: socials + availability -->
+  <div class="grid gap-6 lg:grid-cols-2 mb-8">
+
+    <!-- Social links -->
+    <div class="glass-card rounded-2xl p-6" data-anim="fade-left">
+      <h2 class="text-xs font-bold uppercase tracking-[0.15em] mb-5" style="color: var(--text-tertiary);">Redes</h2>
+      <ul class="space-y-2.5">
+        @for (s of profile.social; track s.url) {
+          <li>
+            <a [href]="s.url" target="_blank" rel="noreferrer noopener"
+               class="flex min-h-[48px] items-center justify-between rounded-xl px-4 py-3 transition-all group"
+               style="border: 1px solid var(--glass-border); color: var(--text-secondary);">
+              <span class="font-medium text-sm group-hover:text-accent-500 transition-colors">{{ s.title }}</span>
+              <svg class="h-4 w-4 shrink-0 text-neutral-600 group-hover:text-accent-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all"
+                   fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <!-- Availability -->
+    <div class="glass-card rounded-2xl p-6 flex flex-col gap-5" data-anim="fade-right" data-delay="2">
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-[0.15em] mb-4" style="color: var(--text-tertiary);">Disponibilidad</h2>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+          <span class="text-sm font-semibold text-accent-500">Disponible</span>
+        </div>
+        <p class="text-sm leading-relaxed" style="color: var(--text-muted);">
+          Abierto a proyectos académicos, prácticas y colaboraciones donde pueda aportar en
+          frontend o full-stack con buenas prácticas y entrega iterativa.
+        </p>
+      </div>
+      <div class="pt-4" style="border-top: 1px solid var(--glass-border);">
+        <p class="text-xs font-semibold uppercase tracking-widest mb-3" style="color: var(--text-muted);">
+          Prefiero trabajar con
+        </p>
+        <div class="flex flex-wrap gap-2">
+          @for (item of ['Angular', 'TypeScript', '.NET', 'Firebase', 'Tailwind CSS']; track item) {
+            <span class="tech-tag text-xs">{{ item }}</span>
+          }
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Contact form -->
+  <div class="glass-card rounded-2xl p-6 sm:p-8" data-anim="fade-up" data-delay="2">
+    <div class="max-w-2xl">
+      <h2 class="text-lg font-semibold mb-1" style="color: var(--text-primary);">Envíame un mensaje</h2>
+      <p class="text-sm mb-7" style="color: var(--text-muted);">Contame sobre tu proyecto o idea y te respondo a la brevedad.</p>
+
+      <form class="space-y-5" (ngSubmit)="onSubmit($event)" novalidate>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="c-name"
+                   class="block text-xs font-semibold uppercase tracking-wide mb-2"
+                   style="color: var(--text-tertiary);">
+              Nombre <span style="color: var(--accent-primary);">*</span>
+            </label>
+            <input id="c-name" type="text" name="name"
+                   placeholder="Tu nombre"
+                   required minlength="2"
+                   class="w-full" />
+          </div>
+
+          <div>
+            <label for="c-email"
+                   class="block text-xs font-semibold uppercase tracking-wide mb-2"
+                   style="color: var(--text-tertiary);">
+              Email <span style="color: var(--accent-primary);">*</span>
+            </label>
+            <input id="c-email" type="email" name="email"
+                   placeholder="tu@email.com"
+                   required
+                   class="w-full" />
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label for="c-message"
+                   class="text-xs font-semibold uppercase tracking-wide"
+                   style="color: var(--text-tertiary);">
+              Mensaje <span style="color: var(--accent-primary);">*</span>
+            </label>
+            <span class="text-[10px] font-mono tabular-nums"
+                  [style.color]="messageLength() > 480 ? 'var(--accent-primary)' : 'var(--text-muted)'">
+              {{ messageLength() }}/500
+            </span>
+          </div>
+          <textarea id="c-message" name="message"
+                    placeholder="Cuéntame sobre tu proyecto o idea..."
+                    required rows="6" maxlength="500"
+                    class="w-full resize-none"
+                    (input)="onMessageInput($event)"></textarea>
+        </div>
+
+        @if (submitSuccess()) {
+          <div class="flex items-start gap-3 p-4 rounded-xl text-sm"
+               role="status" aria-live="polite"
+               style="background: rgba(34,197,94,0.07); border: 1px solid rgba(34,197,94,0.2); color: #4ade80;">
+            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+            <span>¡Mensaje enviado! Te contactaré lo antes posible.</span>
+          </div>
+        }
+
+        @if (submitError()) {
+          <div class="flex items-start gap-3 p-4 rounded-xl text-sm"
+               role="alert" aria-live="assertive"
+               style="background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.2); color: #f87171;">
+            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+            <span>Hubo un error al enviar. Intentá de nuevo o escribime directamente por LinkedIn.</span>
+          </div>
+        }
+
+        <div class="flex justify-end">
+          <button type="submit" class="btn-primary" [disabled]="isSubmitting()">
+            @if (isSubmitting()) {
+              <svg class="animate-spin h-4 w-4" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Enviando...
+            } @else {
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+              Enviar mensaje
+            }
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</div>

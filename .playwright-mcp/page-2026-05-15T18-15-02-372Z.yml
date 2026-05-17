@@ -1,0 +1,174 @@
+- generic [ref=e4]:
+  - link "Saltar al contenido" [ref=e5] [cursor=pointer]:
+    - /url: "#contenido-principal"
+  - generic [ref=e6]:
+    - banner [ref=e8]:
+      - generic [ref=e9]:
+        - link "Inicio — José John Alaniz" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e11]: José Alaniz
+          - generic [ref=e12]: Portafolio
+        - navigation "Principal" [ref=e13]:
+          - link "Inicio" [ref=e14] [cursor=pointer]:
+            - /url: /
+          - link "Experiencia" [ref=e15] [cursor=pointer]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e16] [cursor=pointer]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e17] [cursor=pointer]:
+            - /url: /contacto
+        - generic [ref=e20]:
+          - button "Cambiar a modo Light" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+            - generic [ref=e24]: Light
+          - button "Cambiar a modo Dark" [ref=e25] [cursor=pointer]:
+            - img [ref=e26]
+            - generic [ref=e28]: Dark
+          - button "Cambiar a modo Auto" [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e32]: Auto
+    - main [ref=e33]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - paragraph [ref=e37]: Sobre mí
+          - heading "Historia y enfoque" [level=1] [ref=e38]
+          - paragraph [ref=e39]: Ingeniería informática, software útil y aprendizaje continuo.
+        - generic [ref=e40]:
+          - generic [ref=e42]:
+            - generic [ref=e46]: JA
+            - generic [ref=e47]: Disponible
+          - generic [ref=e49]:
+            - paragraph [ref=e51]:
+              - text: Mi nombre es José Alaniz, estudiante de Ingeniería en Informática en la
+              - link "Facultad Nacional de Ingeniería" [ref=e52] [cursor=pointer]:
+                - /url: https://www.fni.uto.edu.bo/
+              - text: . Me apasiona el desarrollo de software, la tecnología y resolver problemas con código. Busco aplicar lo aprendido en proyectos reales que aporten valor.
+            - paragraph [ref=e54]:
+              - text: Aquí puedes ver algunos de los
+              - link "proyectos" [ref=e55] [cursor=pointer]:
+                - /url: /proyectos
+              - text: "en los que he trabajado: desde sitios web hasta sistemas de información."
+            - paragraph [ref=e57]: Investigar sobre nuevas herramientas, tecnología e inteligencia artificial es parte de mi práctica diaria. Me interesa profundamente cómo la IA puede transformar el desarrollo de software, el marketing digital y la integración dentro de sistemas, aprovechando modelos de lenguaje, agentes y automatización para construir soluciones más inteligentes y eficientes.
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - generic [ref=e60]: 4+
+                - generic [ref=e61]: Proyectos
+              - generic [ref=e62]:
+                - generic [ref=e63]: 2+
+                - generic [ref=e64]: Años exp.
+              - generic [ref=e65]:
+                - generic [ref=e66]: 10+
+                - generic [ref=e67]: Tecnologías
+            - generic [ref=e68]:
+              - heading "Stack Tecnológico" [level=2] [ref=e71]
+              - generic [ref=e73]:
+                - heading "Frontend" [level=3] [ref=e74]: Frontend
+                - generic [ref=e76]:
+                  - generic [ref=e77]:
+                    - img "Angular" [ref=e78]
+                    - generic [ref=e79]: Angular
+                  - generic [ref=e80]:
+                    - img "Vue" [ref=e81]
+                    - generic [ref=e82]: Vue
+                  - generic [ref=e83]:
+                    - img "React" [ref=e84]
+                    - generic [ref=e85]: React
+                  - generic [ref=e86]:
+                    - img "Next.js" [ref=e87]
+                    - generic [ref=e88]: Next.js
+                  - generic [ref=e89]:
+                    - img "TypeScript" [ref=e90]
+                    - generic [ref=e91]: TypeScript
+                  - generic [ref=e92]:
+                    - img "HTML5" [ref=e93]
+                    - generic [ref=e94]: HTML5
+                  - generic [ref=e95]:
+                    - img "CSS" [ref=e96]
+                    - generic [ref=e97]: CSS
+                  - generic [ref=e98]:
+                    - img "Tailwind CSS" [ref=e99]
+                    - generic [ref=e100]: Tailwind CSS
+                  - generic [ref=e101]:
+                    - img "Bootstrap" [ref=e102]
+                    - generic [ref=e103]: Bootstrap
+              - generic [ref=e104]:
+                - heading "Backend & APIs" [level=3] [ref=e105]: Backend & APIs
+                - generic [ref=e107]:
+                  - generic [ref=e108]:
+                    - img ".NET" [ref=e109]
+                    - generic [ref=e110]: .NET
+                  - generic [ref=e111]:
+                    - img "NestJS" [ref=e112]
+                    - generic [ref=e113]: NestJS
+                  - generic [ref=e114]:
+                    - img "Postman" [ref=e115]
+                    - generic [ref=e116]: Postman
+              - generic [ref=e117]:
+                - heading "Base de datos & Cloud" [level=3] [ref=e118]: Base de datos & Cloud
+                - generic [ref=e120]:
+                  - generic [ref=e121]:
+                    - img "Firebase" [ref=e122]
+                    - generic [ref=e123]: Firebase
+                  - generic [ref=e124]:
+                    - img "Supabase" [ref=e125]
+                    - generic [ref=e126]: Supabase
+                  - generic [ref=e127]:
+                    - img "PostgreSQL" [ref=e128]
+                    - generic [ref=e129]: PostgreSQL
+                  - generic [ref=e130]:
+                    - img "SQL Server" [ref=e131]
+                    - generic [ref=e132]: SQL Server
+                  - generic [ref=e133]:
+                    - img "SQLite" [ref=e134]
+                    - generic [ref=e135]: SQLite
+              - generic [ref=e136]:
+                - heading "Mobile & Tools" [level=3] [ref=e137]: Mobile & Tools
+                - generic [ref=e139]:
+                  - generic [ref=e140]:
+                    - img "Flutter" [ref=e141]
+                    - generic [ref=e142]: Flutter
+                  - generic [ref=e143]:
+                    - img "Google Analytics" [ref=e144]
+                    - generic [ref=e145]: Google Analytics
+                  - generic [ref=e146]:
+                    - img "Canva" [ref=e147]
+                    - generic [ref=e148]: Canva
+              - generic [ref=e149]:
+                - heading "IA & Dev Tools" [level=3] [ref=e150]:
+                  - img [ref=e151]
+                  - text: IA & Dev Tools
+                - generic [ref=e153]:
+                  - generic [ref=e154]:
+                    - img "Claude AI" [ref=e155]
+                    - generic [ref=e156]: Claude AI
+                  - generic [ref=e157]:
+                    - img "Cursor" [ref=e158]
+                    - generic [ref=e159]: Cursor
+                  - generic [ref=e160]:
+                    - img "OpenCode" [ref=e161]
+                    - generic [ref=e162]: OpenCode
+                  - generic [ref=e163]:
+                    - img "Antigravity" [ref=e164]
+                    - generic [ref=e165]: Antigravity
+            - generic [ref=e166]:
+              - heading "Habilidades Blandas" [level=2] [ref=e169]
+              - generic [ref=e171]:
+                - generic [ref=e172]: Liderazgo
+                - generic [ref=e173]: Trabajo en equipo
+                - generic [ref=e174]: Comunicación efectiva
+                - generic [ref=e175]: Creatividad
+                - generic [ref=e176]: Responsabilidad
+                - generic [ref=e177]: Adaptabilidad
+            - paragraph [ref=e178]:
+              - link "Ver experiencia →" [ref=e179] [cursor=pointer]:
+                - /url: /experiencia
+    - contentinfo [ref=e181]:
+      - generic [ref=e182]:
+        - paragraph [ref=e183]: © 2026 José John Alaniz Aramayo
+        - navigation "Pie de página" [ref=e184]:
+          - link "Experiencia" [ref=e185] [cursor=pointer]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e186] [cursor=pointer]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e187] [cursor=pointer]:
+            - /url: /contacto

@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Jose\\\\Desktop\\\\Portafolio\\\\Portafolio\" -Force)",
+      "Bash(Select-Object Name, FullName, PSIsContainer)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Jose\\\\Desktop\\\\Portafolio\\\\Portafolio\" -Force | Select-Object Name, @{Name=\"IsDirectory\";Expression={$_.PSIsContainer}})",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Jose\\\\Desktop\\\\Portafolio\\\\Portafolio\" -Directory | Where-Object {$_.Name -notin @\\('node_modules', 'dist'\\)} | Select-Object Name)",
+      "Read(//c/Users/Jose/.agents/skills/ui-ux-pro-max/**)",
+      "Bash(python scripts/search.py \"portfolio developer glassmorphism tech dark interactive\" --design-system -p \"José Portfolio\" -f markdown)",
+      "Bash(py *)",
+      "Bash(where python *)",
+      "Bash(where python3 *)",
+      "Bash(where py *)",
+      "PowerShell(python \"C:\\\\Users\\\\Jose\\\\.claude\\\\skills\\\\ui-ux-pro-max\\\\scripts\\\\search.py\" \"portfolio developer glassmorphism tech dark interactive\" --design-system -p \"José Portfolio\" -f markdown 2>&1)",
+      "Bash(npx ng *)",
+      "Bash(npm run *)",
+      "Bash(dir src\\\\app\\\\features /s /b)",
+      "Bash(npm start *)",
+      "Bash(Start-Sleep -Seconds 15)",
+      "Bash(Get-Content \"C:\\\\Users\\\\Jose\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Jose-Desktop-Portafolio-Portafolio\\\\024b3072-eed4-4ea3-9ebe-5ae6dd46094d\\\\tasks\\\\b1lnut85s.output\")",
+      "Bash(Select-Object -Last 20)",
+      "mcp__playwright__browser_navigate",
+      "Bash(netstat -ano)",
+      "Bash(node_modules/.bin/ng serve *)",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_evaluate",
+      "Skill(ui-ux-pro-max)",
+      "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\(Object.keys\\(p.dependencies\\).filter\\(k=>k.includes\\('fire'\\)\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(npx tsc *)",
+      "Bash(node_modules\\\\.bin\\\\tsc --noEmit)",
+      "Bash(node node_modules/typescript/bin/tsc --noEmit)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "nanobanana-mcp"
+  ]
+}

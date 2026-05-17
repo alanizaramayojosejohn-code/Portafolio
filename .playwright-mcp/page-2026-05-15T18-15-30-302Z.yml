@@ -1,0 +1,117 @@
+- generic [ref=e4]:
+  - link "Saltar al contenido" [ref=e5] [cursor=pointer]:
+    - /url: "#contenido-principal"
+  - generic [ref=e6]:
+    - banner [ref=e8]:
+      - generic [ref=e9]:
+        - link "Inicio — José John Alaniz" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e11]: José Alaniz
+          - generic [ref=e12]: Portafolio
+        - navigation "Principal" [ref=e13]:
+          - link "Inicio" [ref=e14] [cursor=pointer]:
+            - /url: /
+          - link "Experiencia" [ref=e15] [cursor=pointer]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e16] [cursor=pointer]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e17] [cursor=pointer]:
+            - /url: /contacto
+        - generic [ref=e20]:
+          - button "Cambiar a modo Light" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+            - generic [ref=e24]: Light
+          - button "Cambiar a modo Dark" [ref=e25] [cursor=pointer]:
+            - img [ref=e26]
+            - generic [ref=e28]: Dark
+          - button "Cambiar a modo Auto" [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e32]: Auto
+    - main [ref=e33]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - heading "Todos los Proyectos" [level=1] [ref=e38]
+          - paragraph [ref=e39]: Explora mi portafolio completo de proyectos de desarrollo de software, desde sistemas de gestión hasta aplicaciones móviles.
+        - generic [ref=e40]:
+          - article [ref=e41]:
+            - generic [ref=e44]: Sistema Web
+            - generic [ref=e45]:
+              - heading "Sistema de Inventario y Mantenimiento" [level=3] [ref=e46]
+              - paragraph [ref=e47]: Sistema web para controlar equipos y reportes de mantenimiento en laboratorios de programación. Permite registrar activos, historial de reparaciones y alertas de mantenimiento.
+              - generic [ref=e48]:
+                - generic [ref=e49]: C#
+                - generic [ref=e50]: SQLite
+                - generic [ref=e51]: HTML/CSS
+                - generic [ref=e52]: Bootstrap
+              - link "Ver proyecto" [ref=e53] [cursor=pointer]:
+                - /url: https://github.com/JoseJ57/vicu2/tree/Jose
+                - text: Ver proyecto
+                - img [ref=e54]
+          - article [ref=e56]:
+            - generic [ref=e59]: Gestión
+            - generic [ref=e60]:
+              - heading "Sistema de Asistencia MMA" [level=3] [ref=e61]
+              - paragraph [ref=e62]: Aplicación para registrar asistencia y gestionar clases en una academia de artes marciales. Incluye control de horarios, seguimiento de estudiantes y reportes de asistencia.
+              - generic [ref=e63]:
+                - generic [ref=e64]: PHP
+                - generic [ref=e65]: MySQL
+                - generic [ref=e66]: Bootstrap
+                - generic [ref=e67]: JavaScript
+              - link "Ver proyecto" [ref=e68] [cursor=pointer]:
+                - /url: https://github.com/JoseJ57/Helluz
+                - text: Ver proyecto
+                - img [ref=e69]
+          - article [ref=e71]:
+            - generic [ref=e74]: E-commerce
+            - generic [ref=e75]:
+              - heading "Sistema de Ventas con Sucursales" [level=3] [ref=e76]
+              - paragraph [ref=e77]: Colaboré en un sistema de ventas con múltiples sucursales y un almacén general. Integración de módulos, API REST y sincronización de inventarios entre sucursales en tiempo real.
+              - generic [ref=e78]:
+                - generic [ref=e79]: Laravel
+                - generic [ref=e80]: React
+                - generic [ref=e81]: PHP
+                - generic [ref=e82]: MySQL
+          - article [ref=e83]:
+            - generic [ref=e86]: Membresías
+            - generic [ref=e87]:
+              - heading "Control de Asistencia y Membresías" [level=3] [ref=e88]
+              - paragraph [ref=e89]: Sistema web para el control de membresías y asistencia de la academia Helluz. Gestión de planes, pagos, renovaciones y seguimiento de miembros activos e inactivos.
+              - generic [ref=e90]:
+                - generic [ref=e91]: C#
+                - generic [ref=e92]: SQLite
+                - generic [ref=e93]: HTML/CSS
+                - generic [ref=e94]: Bootstrap
+              - link "Ver proyecto" [ref=e95] [cursor=pointer]:
+                - /url: https://github.com/JoseJ57/vicu2/tree/Jose
+                - text: Ver proyecto
+                - img [ref=e96]
+          - article [ref=e98]:
+            - generic [ref=e101]: E-commerce & Gestión
+            - generic [ref=e102]:
+              - heading "PokePlace - Cafetería Temática" [level=3] [ref=e103]
+              - paragraph [ref=e104]: Sistema de ventas y gestión de inventario para cafetería temática PokePlace. Control de pedidos, menú digital, administración de stock y reportes de ventas.
+              - generic [ref=e105]:
+                - generic [ref=e106]: Firebase
+                - generic [ref=e107]: Angular
+                - generic [ref=e108]: Tailwind CSS
+                - generic [ref=e109]: Angular Material
+          - article [ref=e110]:
+            - generic [ref=e113]: Fitness & Salud
+            - generic [ref=e114]:
+              - heading "PR - App de Entrenamiento" [level=3] [ref=e115]
+              - paragraph [ref=e116]: Aplicación móvil para controlar rutinas y progreso en el gimnasio. Seguimiento de ejercicios, gráficos de progreso, control de rachas y artículos para principiantes.
+              - generic [ref=e117]:
+                - generic [ref=e118]: Flutter
+                - generic [ref=e119]: Supabase
+                - generic [ref=e120]: Claude Code
+                - generic [ref=e121]: Pencil
+    - contentinfo [ref=e123]:
+      - generic [ref=e124]:
+        - paragraph [ref=e125]: © 2026 José John Alaniz Aramayo
+        - navigation "Pie de página" [ref=e126]:
+          - link "Experiencia" [ref=e127] [cursor=pointer]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e128] [cursor=pointer]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e129] [cursor=pointer]:
+            - /url: /contacto

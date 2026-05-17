@@ -1,0 +1,86 @@
+- generic [ref=e4]:
+  - link "Saltar al contenido" [ref=e5] [cursor=pointer]:
+    - /url: "#contenido-principal"
+  - generic [ref=e6]:
+    - banner [ref=e8]:
+      - generic [ref=e9]:
+        - link "Inicio — José John Alaniz" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e11]: José Alaniz
+          - generic [ref=e12]: Portafolio
+        - navigation "Principal" [ref=e13]:
+          - link "Inicio" [ref=e14] [cursor=pointer]:
+            - /url: /
+          - link "Experiencia" [ref=e15] [cursor=pointer]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e16] [cursor=pointer]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e17] [cursor=pointer]:
+            - /url: /contacto
+        - generic [ref=e20]:
+          - button "Cambiar a modo Light" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+            - generic [ref=e24]: Light
+          - button "Cambiar a modo Dark" [ref=e25] [cursor=pointer]:
+            - img [ref=e26]
+            - generic [ref=e28]: Dark
+          - button "Cambiar a modo Auto" [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e32]: Auto
+    - main [ref=e33]:
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - heading "Experiencia Completa" [level=1] [ref=e38]
+          - paragraph [ref=e39]: Mi trayectoria profesional y proyectos académicos, desde desarrollo web hasta sistemas de gestión empresarial.
+        - generic [ref=e40]:
+          - generic [ref=e46]:
+            - text: 2024-2025
+            - paragraph [ref=e47]: Diseñé varias páginas web usando HTML, CSS y JavaScript, enfocadas en experiencias limpias y modernas. Cada sitio refleja mi interés por crear interfaces atractivas y funcionales, poniendo en práctica lo que aprendo en la universidad.
+            - generic [ref=e48]:
+              - generic [ref=e49]: JavaScript
+              - generic [ref=e50]: HTML
+              - generic [ref=e51]: React
+              - generic [ref=e52]: Bootstrap
+              - generic [ref=e53]: CSS
+          - generic [ref=e58]:
+            - text: July — Dec 2024
+            - heading "Desarrollador" [level=3] [ref=e59]
+            - paragraph [ref=e60]: Desarrollé un sistema completo para gestionar inventarios y reportes de mantenimiento en laboratorios de programación. Permite llevar un registro de equipos, activos y reparaciones, optimizando el trabajo de los jefes de laboratorio y directores de carrera.
+            - generic [ref=e61]:
+              - generic [ref=e62]: HTML
+              - generic [ref=e63]: CSS
+              - generic [ref=e64]: Bootstrap
+              - generic [ref=e65]: JavaScript
+              - generic [ref=e66]: C#
+              - generic [ref=e67]: Scrum
+          - generic [ref=e72]:
+            - text: "2025"
+            - heading "Developer-Systems analyst" [level=3] [ref=e73]
+            - paragraph [ref=e74]: Creé un sistema para registrar asistencia y gestionar alumnos de una academia de artes marciales. El sistema facilita el control de clases, horarios y seguimiento de los estudiantes, mostrando cómo la programación puede ayudar a la organización y eficiencia.
+            - generic [ref=e75]:
+              - generic [ref=e76]: HTML
+              - generic [ref=e77]: CSS
+              - generic [ref=e78]: Bootstrap
+              - generic [ref=e79]: JavaScript
+              - generic [ref=e80]: C#
+              - generic [ref=e81]: Scrum
+          - generic [ref=e86]:
+            - text: "2025"
+            - heading "Developer" [level=3] [ref=e87]
+            - paragraph [ref=e88]: Colaboré en el desarrollo de un sistema de ventas con gestión de sucursales y almacén general, usando Laravel en el backend y React en el frontend. Participé en la integración de módulos, manejo de API REST y sincronización de inventarios entre sucursales.
+            - generic [ref=e89]:
+              - generic [ref=e90]: PHP
+              - generic [ref=e91]: React
+              - generic [ref=e92]: JavaScript
+              - generic [ref=e93]: CSS
+              - generic [ref=e94]: Iconix
+    - contentinfo [ref=e96]:
+      - generic [ref=e97]:
+        - paragraph [ref=e98]: © 2026 José John Alaniz Aramayo
+        - navigation "Pie de página" [ref=e99]:
+          - link "Experiencia" [ref=e100] [cursor=pointer]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e101] [cursor=pointer]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e102] [cursor=pointer]:
+            - /url: /contacto

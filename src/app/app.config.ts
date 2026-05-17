@@ -17,6 +17,7 @@ import {
   ScreenTrackingService,
   UserTrackingService,
 } from '@angular/fire/analytics';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { environment } from './environments/environment';
 
 export const appConfig: ApplicationConfig = {
@@ -30,6 +31,7 @@ export const appConfig: ApplicationConfig = {
       registrationStrategy: 'registerWhenStable:30000',
     }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
     provideAnalytics(() => getAnalytics()),
     ScreenTrackingService,
     UserTrackingService,

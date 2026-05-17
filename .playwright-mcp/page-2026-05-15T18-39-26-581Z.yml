@@ -1,0 +1,259 @@
+- generic [ref=e4]:
+  - link "Saltar al contenido" [ref=e5] [cursor=pointer]:
+    - /url: "#contenido-principal"
+  - generic [ref=e6]:
+    - banner [ref=e8]:
+      - generic [ref=e9]:
+        - link "Inicio — José John Alaniz" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e11]: José Alaniz
+          - generic [ref=e12]: Portafolio
+        - navigation "Principal" [ref=e13]:
+          - link "Inicio" [ref=e14] [cursor=pointer]:
+            - /url: /
+          - link "Experiencia" [ref=e15] [cursor=pointer]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e16] [cursor=pointer]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e17] [cursor=pointer]:
+            - /url: /contacto
+        - generic [ref=e20]:
+          - button "Cambiar a modo Light" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+            - generic [ref=e24]: Light
+          - button "Cambiar a modo Dark" [ref=e25] [cursor=pointer]:
+            - img [ref=e26]
+            - generic [ref=e28]: Dark
+          - button "Cambiar a modo Auto" [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e32]: Auto
+    - main [ref=e33]:
+      - generic [ref=e288]:
+        - generic [ref=e290]:
+          - paragraph [ref=e291]: Hola, soy
+          - heading "José John Alaniz Aramayo" [level=1] [ref=e292]
+          - paragraph [ref=e293]: Estudiante de Ingeniería Informática
+          - paragraph [ref=e294]: Mejoro mis habilidades en desarrollo de software profesional y funcional, que mejore la calidad de trabajo de las personas.
+          - generic [ref=e295]:
+            - button "Ver proyectos" [ref=e296] [cursor=pointer]
+            - button "Contacto" [ref=e297] [cursor=pointer]
+        - generic [ref=e299]:
+          - generic [ref=e301]: Sobre mí
+          - generic [ref=e302]:
+            - generic [ref=e303]:
+              - heading "Pasión por el código limpio" [level=2] [ref=e304]
+              - paragraph [ref=e305]: Soy estudiante de Ingeniería Informática con enfoque en desarrollo de software profesional y funcional. Me especializo en crear experiencias digitales que mejoran la calidad de trabajo de las personas.
+            - generic [ref=e306]:
+              - heading "Pasión por la investigación y el crecimiento" [level=2] [ref=e307]
+              - paragraph [ref=e308]: Investigar sobre nuevas herramientas, tecnología e inteligencia artificial es parte de mi práctica diaria. Me interesa cómo la IA puede transformar el desarrollo de software, el marketing digital y la integración dentro de sistemas.
+          - generic [ref=e309]:
+            - heading "Stack Tecnológico" [level=3] [ref=e311]
+            - generic [ref=e313]:
+              - heading "Frontend" [level=4] [ref=e314]: Frontend
+              - generic [ref=e316]:
+                - generic [ref=e317]:
+                  - img "Angular" [ref=e318]
+                  - generic [ref=e319]: Angular
+                - generic [ref=e320]:
+                  - img "Vue" [ref=e321]
+                  - generic [ref=e322]: Vue
+                - generic [ref=e323]:
+                  - img "React" [ref=e324]
+                  - generic [ref=e325]: React
+                - generic [ref=e326]:
+                  - img "Next.js" [ref=e327]
+                  - generic [ref=e328]: Next.js
+                - generic [ref=e329]:
+                  - img "TypeScript" [ref=e330]
+                  - generic [ref=e331]: TypeScript
+                - generic [ref=e332]:
+                  - img "HTML5" [ref=e333]
+                  - generic [ref=e334]: HTML5
+                - generic [ref=e335]:
+                  - img "CSS" [ref=e336]
+                  - generic [ref=e337]: CSS
+                - generic [ref=e338]:
+                  - img "Tailwind CSS" [ref=e339]
+                  - generic [ref=e340]: Tailwind CSS
+                - generic [ref=e341]:
+                  - img "Bootstrap" [ref=e342]
+                  - generic [ref=e343]: Bootstrap
+            - generic [ref=e344]:
+              - heading "Backend & APIs" [level=4] [ref=e345]: Backend & APIs
+              - generic [ref=e347]:
+                - generic [ref=e348]:
+                  - img ".NET" [ref=e349]
+                  - generic [ref=e350]: .NET
+                - generic [ref=e351]:
+                  - img "NestJS" [ref=e352]
+                  - generic [ref=e353]: NestJS
+                - generic [ref=e354]:
+                  - img "Postman" [ref=e355]
+                  - generic [ref=e356]: Postman
+            - generic [ref=e357]:
+              - heading "Base de datos & Cloud" [level=4] [ref=e358]: Base de datos & Cloud
+              - generic [ref=e360]:
+                - generic [ref=e361]:
+                  - img "Firebase" [ref=e362]
+                  - generic [ref=e363]: Firebase
+                - generic [ref=e364]:
+                  - img "Supabase" [ref=e365]
+                  - generic [ref=e366]: Supabase
+                - generic [ref=e367]:
+                  - img "PostgreSQL" [ref=e368]
+                  - generic [ref=e369]: PostgreSQL
+                - generic [ref=e370]:
+                  - img "SQL Server" [ref=e371]
+                  - generic [ref=e372]: SQL Server
+                - generic [ref=e373]:
+                  - img "SQLite" [ref=e374]
+                  - generic [ref=e375]: SQLite
+            - generic [ref=e376]:
+              - heading "Mobile & Tools" [level=4] [ref=e377]: Mobile & Tools
+              - generic [ref=e379]:
+                - generic [ref=e380]:
+                  - img "Flutter" [ref=e381]
+                  - generic [ref=e382]: Flutter
+                - generic [ref=e383]:
+                  - img "Google Analytics" [ref=e384]
+                  - generic [ref=e385]: Google Analytics
+                - generic [ref=e386]:
+                  - img "Canva" [ref=e387]
+                  - generic [ref=e388]: Canva
+            - generic [ref=e389]:
+              - heading "IA & Dev Tools" [level=4] [ref=e390]:
+                - img [ref=e391]
+                - text: IA & Dev Tools
+              - generic [ref=e393]:
+                - generic [ref=e394]:
+                  - img "Claude AI" [ref=e395]
+                  - generic [ref=e396]: Claude AI
+                - generic [ref=e397]:
+                  - img "Cursor" [ref=e398]
+                  - generic [ref=e399]: Cursor
+                - generic [ref=e400]:
+                  - img "OpenCode" [ref=e401]
+                  - generic [ref=e402]: OpenCode
+                - generic [ref=e403]:
+                  - img "Antigravity" [ref=e404]
+                  - generic [ref=e405]: Antigravity
+        - generic [ref=e407]:
+          - generic [ref=e409]: Proyectos
+          - generic [ref=e410]:
+            - article [ref=e411]:
+              - generic [ref=e414]: Sistema Web
+              - generic [ref=e415]:
+                - heading "Sistema de Inventario y Mantenimiento" [level=3] [ref=e416]
+                - paragraph [ref=e417]: Sistema web para controlar equipos y reportes de mantenimiento en laboratorios de programación. Permite registrar activos, historial de reparaciones y alertas de mantenimiento.
+                - generic [ref=e418]:
+                  - generic [ref=e419]: C#
+                  - generic [ref=e420]: SQLite
+                  - generic [ref=e421]: HTML/CSS
+                - link "Ver proyecto" [ref=e422] [cursor=pointer]:
+                  - /url: https://github.com/JoseJ57/vicu2/tree/Jose
+                  - text: Ver proyecto
+                  - img [ref=e423]
+            - article [ref=e425]:
+              - generic [ref=e428]: Gestión
+              - generic [ref=e429]:
+                - heading "Sistema de Asistencia MMA" [level=3] [ref=e430]
+                - paragraph [ref=e431]: Aplicación para registrar asistencia y gestionar clases en una academia de artes marciales. Incluye control de horarios, seguimiento de estudiantes y reportes de asistencia.
+                - generic [ref=e432]:
+                  - generic [ref=e433]: PHP
+                  - generic [ref=e434]: MySQL
+                  - generic [ref=e435]: Bootstrap
+                - link "Ver proyecto" [ref=e436] [cursor=pointer]:
+                  - /url: https://github.com/JoseJ57/Helluz
+                  - text: Ver proyecto
+                  - img [ref=e437]
+            - article [ref=e439]:
+              - generic [ref=e442]: E-commerce
+              - generic [ref=e443]:
+                - heading "Sistema de Ventas con Sucursales" [level=3] [ref=e444]
+                - paragraph [ref=e445]: Colaboré en un sistema de ventas con múltiples sucursales y un almacén general. Integración de módulos, API REST y sincronización de inventarios entre sucursales en tiempo real.
+                - generic [ref=e446]:
+                  - generic [ref=e447]: Laravel
+                  - generic [ref=e448]: React
+                  - generic [ref=e449]: PHP
+                - link "Ver proyecto" [ref=e450] [cursor=pointer]:
+                  - /url: ""
+                  - text: Ver proyecto
+                  - img [ref=e451]
+          - link "Ver todos los proyectos" [ref=e454] [cursor=pointer]:
+            - /url: /proyectos
+        - generic [ref=e456]:
+          - generic [ref=e458]: Experiencia
+          - generic [ref=e459]:
+            - generic [ref=e465]:
+              - text: 2024-2025
+              - paragraph [ref=e466]: Diseñé varias páginas web usando HTML, CSS y JavaScript, enfocadas en experiencias limpias y modernas. Cada sitio refleja mi interés por crear interfaces atractivas y funcionales, poniendo en práctica lo que aprendo en la universidad.
+              - generic [ref=e467]:
+                - generic [ref=e468]: JavaScript
+                - generic [ref=e469]: HTML
+                - generic [ref=e470]: React
+                - generic [ref=e471]: Bootstrap
+            - generic [ref=e476]:
+              - text: July — Dec 2024
+              - heading "Desarrollador" [level=3] [ref=e477]
+              - paragraph [ref=e478]: Desarrollé un sistema completo para gestionar inventarios y reportes de mantenimiento en laboratorios de programación. Permite llevar un registro de equipos, activos y reparaciones, optimizando el trabajo de los jefes de laboratorio y directores de carrera.
+              - generic [ref=e479]:
+                - generic [ref=e480]: HTML
+                - generic [ref=e481]: CSS
+                - generic [ref=e482]: Bootstrap
+                - generic [ref=e483]: JavaScript
+            - generic [ref=e488]:
+              - text: "2025"
+              - heading "Developer-Systems analyst" [level=3] [ref=e489]
+              - paragraph [ref=e490]: Creé un sistema para registrar asistencia y gestionar alumnos de una academia de artes marciales. El sistema facilita el control de clases, horarios y seguimiento de los estudiantes, mostrando cómo la programación puede ayudar a la organización y eficiencia.
+              - generic [ref=e491]:
+                - generic [ref=e492]: HTML
+                - generic [ref=e493]: CSS
+                - generic [ref=e494]: Bootstrap
+                - generic [ref=e495]: JavaScript
+          - link "Ver experiencia completa" [ref=e497] [cursor=pointer]:
+            - /url: /experiencia
+        - generic [ref=e499]:
+          - generic [ref=e501]: Contacto
+          - generic [ref=e502]:
+            - generic [ref=e503]:
+              - heading "Conectemos" [level=3] [ref=e504]
+              - paragraph [ref=e505]: Estoy abierto a proyectos académicos, prácticas y colaboraciones. Respondo con prioridad por LinkedIn o GitHub.
+              - list [ref=e506]:
+                - listitem [ref=e507]:
+                  - link "GitHub" [ref=e508] [cursor=pointer]:
+                    - /url: https://github.com/JoseJ57
+                    - generic [ref=e509]: GitHub
+                    - img [ref=e510]
+                - listitem [ref=e512]:
+                  - link "LinkedIn" [ref=e513] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/alaniz-aramayo-jos%C3%A9-john-856445384/
+                    - generic [ref=e514]: LinkedIn
+                    - img [ref=e515]
+                - listitem [ref=e517]:
+                  - link "Instagram" [ref=e518] [cursor=pointer]:
+                    - /url: https://www.instagram.com/josejhon_al/
+                    - generic [ref=e519]: Instagram
+                    - img [ref=e520]
+            - generic [ref=e522]:
+              - heading "Envíame un mensaje" [level=3] [ref=e523]
+              - generic [ref=e524]:
+                - generic [ref=e525]:
+                  - generic [ref=e526]: Nombre
+                  - textbox "Tu nombre" [ref=e527]
+                - generic [ref=e528]:
+                  - generic [ref=e529]: Email
+                  - textbox "tu@email.com" [ref=e530]
+                - generic [ref=e531]:
+                  - generic [ref=e532]: Mensaje
+                  - textbox "Cuéntame sobre tu proyecto..." [ref=e533]
+                - button "Enviar mensaje" [ref=e534] [cursor=pointer]
+    - contentinfo [ref=e280]:
+      - generic [ref=e281]:
+        - paragraph [ref=e282]: © 2026 José John Alaniz Aramayo
+        - navigation "Pie de página" [ref=e283]:
+          - link "Experiencia" [ref=e284] [cursor=pointer]:
+            - /url: /experiencia
+          - link "Proyectos" [ref=e285] [cursor=pointer]:
+            - /url: /proyectos
+          - link "Contacto" [ref=e286] [cursor=pointer]:
+            - /url: /contacto
