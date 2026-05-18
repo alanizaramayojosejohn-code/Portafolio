@@ -26,8 +26,8 @@ export default class AboutPageComponent {
   private readonly router = inject(Router);
 
   constructor() {
-    inject(Title).setTitle('Sobre mí | José Alaniz - Desarrollador de Software');
-    inject(Meta).updateTag({ name: 'description', content: 'Conoce más sobre José John Alaniz Aramayo: estudiante de Ingeniería Informática en Bolivia, especializado en Angular, Firebase, Flutter y desarrollo de software profesional.' });
+    inject(Title).setTitle('Sobre mí | José John Alaniz Aramayo - Desarrollador en Oruro, Bolivia');
+    inject(Meta).updateTag({ name: 'description', content: 'José John Alaniz Aramayo, desarrollador de software en Oruro, Bolivia. Estudiante de Ingeniería Informática en la UTO. Usa Claude Code para desarrollo asistido por IA con Angular, Firebase y Flutter.' });
   }
 
   readonly profile = PROFILE;
