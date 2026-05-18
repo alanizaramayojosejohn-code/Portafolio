@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
 import { AnalyticsService } from '../../../../services/analytics/analytics.service';
 import { PROFILE } from '../../../../data/profile.data';
@@ -23,6 +24,11 @@ interface TechCategory {
 export default class AboutPageComponent {
   private readonly analytics = inject(AnalyticsService);
   private readonly router = inject(Router);
+
+  constructor() {
+    inject(Title).setTitle('Sobre mí | José Alaniz - Desarrollador de Software');
+    inject(Meta).updateTag({ name: 'description', content: 'Conoce más sobre José John Alaniz Aramayo: estudiante de Ingeniería Informática en Bolivia, especializado en Angular, Firebase, Flutter y desarrollo de software profesional.' });
+  }
 
   readonly profile = PROFILE;
 

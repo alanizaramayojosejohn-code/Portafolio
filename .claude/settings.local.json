@@ -28,7 +28,18 @@
       "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\(Object.keys\\(p.dependencies\\).filter\\(k=>k.includes\\('fire'\\)\\).join\\('\\\\n'\\)\\)\")",
       "Bash(npx tsc *)",
       "Bash(node_modules\\\\.bin\\\\tsc --noEmit)",
-      "Bash(node node_modules/typescript/bin/tsc --noEmit)"
+      "Bash(node node_modules/typescript/bin/tsc --noEmit)",
+      "PowerShell(npm list *)",
+      "PowerShell(firebase projects:list *)",
+      "PowerShell(npm install *)",
+      "PowerShell(npm search *)",
+      "PowerShell(firebase experimental:mcp *)",
+      "Bash(python3 *)",
+      "PowerShell(Get-ChildItem *)",
+      "Bash(firebase deploy *)",
+      "Bash(node_modules\\\\.bin\\\\ng build *)",
+      "Read(//mnt/c/Users/Jose/Desktop/Portafolio/**)",
+      "Bash(./node_modules/.bin/ng build *)"
     ]
   },
   "enableAllProjectMcpServers": true,

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { PROFILE } from '../../../../data/profile.data';
 import { ContactService } from '../../../../services/contact/contact.service';
 
@@ -12,6 +13,11 @@ export default class ContactPageComponent {
   readonly profile = PROFILE;
 
   private readonly contactService = inject(ContactService);
+
+  constructor() {
+    inject(Title).setTitle('Contacto | José Alaniz - Desarrollador de Software');
+    inject(Meta).updateTag({ name: 'description', content: 'Contáctame para proyectos académicos, prácticas profesionales o colaboraciones. Respondo por LinkedIn o GitHub en menos de 24 horas.' });
+  }
   readonly isSubmitting = signal(false);
   readonly submitSuccess = signal(false);
   readonly submitError = signal(false);
