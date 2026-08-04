@@ -79,6 +79,19 @@ export const PROJECTS: Project[] = [
     headerGradient: 'linear-gradient(135deg, #064e3b 0%, #047857 50%, #059669 100%)',
     category: 'E-commerce',
   },
+  {
+    slug: 'findme',
+    title: 'FindMe - Búsqueda de Mascotas Perdidas',
+    description:
+      'PWA para el reporte y búsqueda de mascotas extraviadas y halladas. Avistamientos, casos cercanos a tu ubicación y salas de búsqueda grupal donde los usuarios marcan sus rutas en el mapa para descartar zonas ya revisadas.',
+    longDescription:
+      'Aplicación web progresiva construida con Angular y Firebase, integrada con OpenStreetMap y Leaflet.js para mapas interactivos. Permite reportar mascotas perdidas o halladas, registrar avistamientos, ver casos cercanos por geolocalización, y coordinar búsquedas grupales en salas donde cada participante traza su recorrido en tiempo real para evitar duplicar zonas de búsqueda.',
+    technologies: ['Angular', 'Firebase', 'Leaflet.js', 'OpenStreetMap', 'PWA'],
+    link: 'https://zfind-me.web.app/',
+    image: '',
+    headerGradient: 'linear-gradient(135deg, #134e4a 0%, #0d9488 50%, #14b8a6 100%)',
+    category: 'Comunidad & Mascotas',
+  },
 ];
 
 export function projectBySlug(slug: string): Project | undefined {
