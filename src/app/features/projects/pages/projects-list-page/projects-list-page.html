@@ -2,12 +2,12 @@
   <div class="max-w-6xl mx-auto">
 
     <!-- Page header -->
-    <div class="mb-14" data-anim="fade-up">
-      <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent-500 mb-3">Portafolio</p>
-      <h1 class="text-4xl font-bold mb-3 tracking-tight" style="color: var(--text-primary);">
+    <div class="mb-14">
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent-500 mb-3" data-anim="fade-up">Portafolio</p>
+      <h1 class="text-4xl font-bold mb-3 tracking-tight" style="color: var(--text-primary);" data-split>
         Todos los Proyectos
       </h1>
-      <p class="text-sm leading-relaxed max-w-lg" style="color: var(--text-muted);">
+      <p class="text-sm leading-relaxed max-w-lg" style="color: var(--text-muted);" data-anim="fade-up" data-delay="2">
         Explora mi portafolio completo de proyectos de desarrollo de software,
         desde sistemas de gestión hasta aplicaciones móviles.
       </p>
@@ -16,15 +16,15 @@
     <!-- Grid -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       @for (project of projects; track project.slug; let i = $index) {
-        <article class="glass-card overflow-hidden flex flex-col group"
+        <article class="glass-card tilt-card overflow-hidden flex flex-col group"
           data-anim="scale-up"
           [attr.data-delay]="(i % 3 + 1) * 2"
         >
           <!-- Card header -->
-          <div class="h-44 relative overflow-hidden" [style.background]="project.headerGradient">
+          <div class="h-44 relative overflow-hidden shine-frame" [style.background]="project.headerGradient">
             @if (project.image) {
               <img [src]="project.image" [alt]="project.title"
-                   class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                   class="absolute inset-0 w-full h-full object-cover img-reveal ken-burns"
                    loading="lazy" />
             } @else {
               <div class="absolute inset-0"
@@ -44,7 +44,7 @@
           </div>
 
           <!-- Card body -->
-          <div class="p-5 flex-1 flex flex-col">
+          <div class="p-5 flex-1 flex flex-col tilt-layer">
             <h3 class="text-base font-semibold mb-2" style="color: var(--text-primary);">
               {{ project.title }}
             </h3>

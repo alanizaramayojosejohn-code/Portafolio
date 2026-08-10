@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, inject, signal, PLATFORM_ID, effect, HostListener } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  HostListener,
+  PLATFORM_ID,
+  ViewChild,
+  inject,
+  signal,
+} from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { filter } from 'rxjs';
@@ -17,8 +26,18 @@ interface NavLink {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SiteHeaderComponent {
+  @ViewChild('siteHeader') private headerEl?: ElementRef<HTMLElement>;
+  @ViewChild('progressBar') private progressBar?: ElementRef<HTMLElement>;
+
   private readonly router = inject(Router);
   private readonly platformId = inject(PLATFORM_ID);
+
+  /** Scroll position of the previous event, used to detect direction. */
+  private lastScrollY = 0;
+  /** Ignore jitter below this many px before flipping the header's visibility. */
+  private readonly DIRECTION_THRESHOLD = 6;
+  /** Keep the header pinned until the user is past the hero fold. */
+  private readonly HIDE_AFTER = 140;
 
   readonly links: NavLink[] = [
     { label: 'Inicio', path: '/' },
@@ -41,16 +60,47 @@ export class SiteHeaderComponent {
 
     if (isPlatformBrowser(this.platformId)) {
       this.scrolled.set(window.scrollY > 20);
+      this.lastScrollY = window.scrollY;
     }
   }
 
   @HostListener('window:scroll')
   onScroll(): void {
-    this.scrolled.set(window.scrollY > 20);
+    const y = window.scrollY;
+    this.scrolled.set(y > 20);
+    this.updateProgress(y);
+    this.updateVisibility(y);
+    this.lastScrollY = y;
+  }
+
+  /** Fills the accent bar under the header proportionally to page progress. */
+  private updateProgress(y: number): void {
+    const bar = this.progressBar?.nativeElement;
+    if (!bar) return;
+
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = scrollable > 0 ? Math.min(1, Math.max(0, y / scrollable)) : 0;
+    bar.style.transform = `scaleX(${ratio.toFixed(4)})`;
+  }
+
+  /** Slides the header away when scrolling down, brings it back on scroll up. */
+  private updateVisibility(y: number): void {
+    const header = this.headerEl?.nativeElement;
+    if (!header) return;
+
+    const delta = y - this.lastScrollY;
+    if (Math.abs(delta) < this.DIRECTION_THRESHOLD) return;
+
+    // Never hide near the top, or while the mobile menu is open.
+    const shouldHide = delta > 0 && y > this.HIDE_AFTER && !this.menuOpen();
+    header.classList.toggle('header-hidden', shouldHide);
   }
 
   toggleMenu(): void {
     this.menuOpen.update((v) => !v);
+    if (this.menuOpen()) {
+      this.headerEl?.nativeElement.classList.remove('header-hidden');
+    }
   }
 
   closeMenu(): void {
