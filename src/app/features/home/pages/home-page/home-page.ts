@@ -33,8 +33,6 @@ export default class HomePageComponent {
       skills: [
         { name: 'Angular', icon: 'icons/tech_stack/angular.svg', ai: true },
         { name: 'Vue', icon: 'icons/tech_stack/vue.svg', ai: true },
-        { name: 'React', icon: 'icons/tech_stack/react_dark.svg' },
-        { name: 'Next.js', icon: 'icons/tech_stack/nextjs_icon_dark.svg' },
         { name: 'TypeScript', icon: 'icons/tech_stack/typescript.svg' },
         { name: 'HTML5', icon: 'icons/tech_stack/html5.svg' },
         { name: 'CSS', icon: 'icons/tech_stack/css_old.svg' },
@@ -45,18 +43,18 @@ export default class HomePageComponent {
     {
       category: 'Backend & APIs',
       skills: [
+        { name: 'Supabase', icon: 'icons/tech_stack/supabase.svg', ai: true },
+        { name: 'NestJS', icon: 'icons/tech_stack/nestjs.svg', ai: true },
         { name: '.NET', icon: 'icons/tech_stack/dotnet.svg' },
-        { name: 'NestJS', icon: 'icons/tech_stack/nestjs.svg' },
         { name: 'Postman', icon: 'icons/tech_stack/postman.svg' },
+        { name: 'Spring Boot', icon: 'icons/tech_stack/spring-boot.svg' },
       ],
     },
     {
       category: 'Base de datos & Cloud',
       skills: [
-        { name: 'Firebase', icon: 'icons/tech_stack/firebase-wordmark.svg', ai: true },
-        { name: 'Supabase', icon: 'icons/tech_stack/supabase.svg', ai: true },
+        { name: 'Firebase', icon: 'icons/tech_stack/firebase.svg', ai: true },
         { name: 'PostgreSQL', icon: 'icons/tech_stack/postgresql.svg' },
-        { name: 'SQL Server', icon: 'icons/tech_stack/sql-server.svg' },
         { name: 'SQLite', icon: 'icons/tech_stack/sqlite.svg' },
       ],
     },
@@ -71,10 +69,8 @@ export default class HomePageComponent {
     {
       category: 'IA & Dev Tools',
       skills: [
-        { name: 'Claude AI', icon: 'icons/tech_stack/claude-ai-icon.svg', ai: true },
-        { name: 'Cursor', icon: 'icons/tech_stack/cursor_light.svg', ai: true },
+        { name: 'Claude Code', icon: 'icons/tech_stack/claude-ai-icon.svg', ai: true },
         { name: 'OpenCode', icon: 'icons/tech_stack/opencode.svg', ai: true },
-        { name: 'Antigravity', icon: 'icons/tech_stack/antigravity.svg', ai: true },
       ],
     },
   ];

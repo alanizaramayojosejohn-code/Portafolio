@@ -39,7 +39,8 @@
             style="background: conic-gradient(from 0deg, #f97316, #ea580c, #f97316); filter: blur(8px); opacity: 0.45;">
           </div>
           <div class="relative h-60 w-60 rounded-full overflow-hidden" style="border: 2px solid var(--bg-primary);">
-            <img src="images/me/Jose_Alaniz.webp" alt="José Alaniz" class="w-full h-full object-cover object-top" />
+            <img src="images/me/Jose_Alaniz.webp" alt="José Alaniz"
+              class="w-full h-full object-cover object-top img-reveal" />
           </div>
         </div>
       </div>
@@ -86,21 +87,21 @@
       </div>
 
       <div class="grid md:grid-cols-2 gap-10 mb-16">
-        <div data-anim="fade-left">
-          <h2 class="text-2xl font-bold mb-4" style="color: var(--text-primary);">
+        <div>
+          <h2 class="text-2xl font-bold mb-4" style="color: var(--text-primary);" data-split>
             Pasión por el código limpio
           </h2>
-          <p class="leading-relaxed" style="color: var(--text-tertiary);">
+          <p class="leading-relaxed" style="color: var(--text-tertiary);" data-anim="fade-up" data-delay="2">
             Soy <strong style="color: var(--text-secondary);">José John Alaniz Aramayo</strong>, estudiante de Ingeniería Informática en
             <strong style="color: var(--text-secondary);">Oruro, Bolivia</strong>, con enfoque en desarrollo de software profesional y funcional.
             Me especializo en crear experiencias digitales que mejoran la calidad de trabajo de las personas.
           </p>
         </div>
-        <div data-anim="fade-right" data-delay="2">
-          <h2 class="text-2xl font-bold mb-4" style="color: var(--text-primary);">
+        <div>
+          <h2 class="text-2xl font-bold mb-4" style="color: var(--text-primary);" data-split>
             Pasión por la investigación y el crecimiento
           </h2>
-          <p class="leading-relaxed" style="color: var(--text-tertiary);">
+          <p class="leading-relaxed" style="color: var(--text-tertiary);" data-anim="fade-up" data-delay="3">
             Investigar sobre nuevas herramientas, tecnología e inteligencia artificial es parte de mi práctica diaria.
             Uso <span class="font-medium" style="color: #22d3ee;">Claude Code</span> como herramienta principal de desarrollo —
             siendo uno de los pocos desarrolladores en <strong style="color: var(--text-secondary);">Bolivia</strong> que trabaja con
@@ -162,13 +163,13 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         @for (project of displayedProjects; track project.slug; let i = $index) {
-        <article class="glass-card overflow-hidden flex flex-col group" data-anim="scale-up"
+        <article class="glass-card tilt-card overflow-hidden flex flex-col group" data-anim="scale-up"
           [attr.data-delay]="(i + 1) * 2">
 
-          <div class="h-44 relative overflow-hidden" [style.background]="project.headerGradient">
+          <div class="h-44 relative overflow-hidden shine-frame" [style.background]="project.headerGradient">
             @if (project.image) {
             <img [src]="project.image" [alt]="project.title"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              class="absolute inset-0 w-full h-full object-cover img-reveal ken-burns"
               loading="lazy" />
             } @else {
             <div class="absolute inset-0"
@@ -188,7 +189,7 @@
               {{ i < 9 ? '0' + (i + 1) : (i + 1) }} </div>
             </div>
 
-            <div class="p-5 flex-1 flex flex-col">
+            <div class="p-5 flex-1 flex flex-col tilt-layer">
               <h3 class="text-base font-semibold mb-2" style="color: var(--text-primary);">
                 {{ project.title }}
               </h3>
@@ -258,7 +259,7 @@
 
             <div class="ml-8 md:ml-0 md:w-1/2" [class.md:text-right]="i % 2 === 0" [class.md:pr-8]="i % 2 === 0"
               [class.md:pl-8]="i % 2 !== 0">
-              <div class="glass-card p-6">
+              <div class="glass-card tilt-card p-6">
                 <span class="text-xs font-bold uppercase tracking-widest text-accent-500">
                   {{ exp.period }}
                 </span>

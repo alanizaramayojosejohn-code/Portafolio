@@ -39,7 +39,11 @@
       "Bash(firebase deploy *)",
       "Bash(node_modules\\\\.bin\\\\ng build *)",
       "Read(//mnt/c/Users/Jose/Desktop/Portafolio/**)",
-      "Bash(./node_modules/.bin/ng build *)"
+      "Bash(./node_modules/.bin/ng build *)",
+      "Bash(find /opt/pw-browsers/chromium-1194 -maxdepth 4 2>/dev/null)",
+      "Bash(sed -i \"s#/opt/pw-browsers/chromium/chrome-linux/chrome#/opt/pw-browsers/chromium-1194/chrome-linux/chrome#\" screenshot.js)",
+      "Bash(node screenshot.js)",
+      "Bash(env)"
     ]
   },
   "enableAllProjectMcpServers": true,
